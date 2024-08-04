@@ -1,0 +1,102 @@
+/* Fonts */
+
+@font-face {
+    font-family: Iran-Yekan;
+    src: url(/public/Fonts/BYekan+.ttf) , url(/public/Fonts/BYekan+\ Bold.ttf);
+}
+
+/* Header css */
+
+.header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: max-content;
+    /* background-color: rgb(116, 116, 116); */
+    justify-content:space-between;
+    align-items: center;
+    transition: all 0.6s linear;
+    align-items: center;
+}
+
+.header-scroller {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: max-content;
+    /* background-color: rgb(116, 116, 116); */
+    justify-content:space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
+}
+
+.header-logo {
+    height: 100%;
+    padding: 1.5rem;
+
+}
+
+.header-links {
+    height: 100%;
+    display:flex;
+}
+
+.header-items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.link {
+    color: black;
+    margin: 1.1rem;
+    font-size: 1.1rem;
+    text-decoration:none;
+    font-weight: bold;
+    font-family: 'b-titr';
+    /* font-family: Iran-Yekan; */
+}
+
+.link:hover {
+    color: #DD226D;
+    transition: ease-in-out .2s;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    /* Styles go here */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .header-links {
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    /* Styles go here */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    /* Styles go here */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    /* Styles go here */
+}

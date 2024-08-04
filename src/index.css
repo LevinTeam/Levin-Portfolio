@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+::-webkit-scrollbar-track {
+    background-color: hsl(266, 16%, 92%);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: hsl(266, 16%, 92%);
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsl(237, 94%, 81%);
+}
