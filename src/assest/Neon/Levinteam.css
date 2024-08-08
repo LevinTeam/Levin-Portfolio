@@ -1,0 +1,67 @@
+:root {
+    --brand-primary: #44D688;
+    --font-family-display: Monoton, Arial, sans-serif;
+    --font-family-primary: 'Rubik', Arial, sans-serif;
+    --neon-effect: 0 0 0 transparent,
+      0 0 20px rgb(0, 123, 255),
+      0 0 50px rgba(0, 123, 255, .5),
+      0 0 200px rgba(0, 123, 255, .5),
+      0 0 250px rgba(0, 123, 255, 1),
+      0 0 300px rgba(0, 123, 255, 1),
+      -250px -100px 100px rgba(0, 123, 255, 1);
+  }
+
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+  }
+  
+  .hero-block {
+    text-align: center;
+  }
+  
+  .hero-title {
+    animation: neon-blink 3s infinite alternate;
+    color: rgb(0, 123, 255);
+    font-family: var(--font-family-display);
+    font-size: 45px;
+    text-shadow: var(--neon-effect);
+    text-transform: uppercase;
+    transform: skew(20deg, -12deg) rotateZ(5deg);
+    white-space: nowrap;
+    font-size: 76px;
+  }
+  
+  .hero-title strong {
+    display: block;
+    font-weight: normal;
+    text-indent: -1.66em;
+  }
+  
+  @keyframes neon-blink {
+    44% {
+      opacity: 1;
+    }
+  
+    45% {
+      opacity: .7;
+    }
+  
+    46% {
+      opacity: 1;
+    }
+  
+    98% {
+      opacity: 1;
+    }
+  
+    99% {
+      opacity: .5;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  

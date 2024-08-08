@@ -1,0 +1,51 @@
+.hero-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4.5rem;
+    font-family: Iran-Yekan;
+    font-weight: bolder;
+    flex-wrap: wrap; 
+}
+
+.hero-box img {
+    width: 50%;
+    height: auto;
+}
+
+
+@media (max-width: 1024px) {
+    .hero-box {
+        flex-direction: column; 
+    }
+
+    .hero-box img {
+        width: 70%;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-box-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-box-text h1,
+    .hero-box-text p,
+    .hero-box-text div {
+        width: 90%; 
+        text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .hero-box-text h1,
+    .hero-box-text p,
+    .hero-box-text div {
+        width: 75%; 
+        margin: 15px;
+    }
+}
+}

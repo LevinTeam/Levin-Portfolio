@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Iran-Yekan;
+    src: url(../public/Fonts/BYekan+.ttf) , url(../public/Fonts/BYekan+\ Bold.ttf) ;
+}
+
 * {
     margin: 0;
     padding: 0;
