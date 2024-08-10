@@ -1,7 +1,5 @@
 :root {
-    --brand-primary: #44D688;
     --font-family-display: Monoton, Arial, sans-serif;
-    --font-family-primary: 'Rubik', Arial, sans-serif;
     --neon-effect: 0 0 0 transparent,
       0 0 20px rgb(0, 123, 255),
       0 0 50px rgba(0, 123, 255, .5),
@@ -14,7 +12,8 @@
 .hero-wrapper {
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 100%;
+    margin-top: 10%;
   }
   
   .hero-block {
@@ -23,14 +22,14 @@
   
   .hero-title {
     animation: neon-blink 3s infinite alternate;
-    color: rgb(0, 123, 255);
+    color: var(--primary-blue);
     font-family: var(--font-family-display);
     font-size: 45px;
     text-shadow: var(--neon-effect);
     text-transform: uppercase;
     transform: skew(20deg, -12deg) rotateZ(5deg);
     white-space: nowrap;
-    font-size: 76px;
+    font-size: 106px;
   }
   
   .hero-title strong {
@@ -38,6 +37,15 @@
     font-weight: normal;
     text-indent: -1.66em;
   }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 76px;
+    }
+    .hero-title strong {
+        text-indent: 0;
+    }
+}
   
   @keyframes neon-blink {
     44% {

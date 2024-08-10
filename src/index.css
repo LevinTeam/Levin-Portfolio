@@ -1,22 +1,49 @@
+/* Lite Theme */
+
+:root {
+    --primary-blue: #007bff;
+    --light-blue: #5aa9ff;
+    --dark-blue: #004085;
+    --white: #fff;
+    --light-gray: #343a40;
+    --lighter-gray: #f8f9fa;
+}
+
+/* Dark Theme */
+
+:root {
+    --primary-green: #0ef0ad;
+    --dark-green: #0ba37d;
+    --main-dark: #1f2041;
+    --dark-gray: #b8b8d1;
+    --darker-gray: #2c2c54;
+    --black: #000;
+}
+
+/* Fonts */
+
 @font-face {
     font-family: Iran-Yekan;
     src: url(../public/Fonts/BYekan+.ttf) , url(../public/Fonts/BYekan+\ Bold.ttf) ;
 }
+
+/* Main Style */ 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     direction: rtl;
+    user-select: none;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: hsl(266, 16%, 92%);
+    background-color: #eae7ee;
 }
 ::-webkit-scrollbar {
     width: 8px;
-    background-color: hsl(266, 16%, 92%);
+    background-color: #eae7ee;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(237, 94%, 81%);
+    background-color: #a1a6fc;
 }

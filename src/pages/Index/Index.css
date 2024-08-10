@@ -1,27 +1,168 @@
+/* Hero Box StyleSheet */
+
 .hero-box {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4.5rem;
-    font-family: Iran-Yekan;
-    font-weight: bolder;
+    font-family: Vazirmatn;
     flex-wrap: wrap; 
+    margin-top: 10%;
 }
-
-.hero-box img {
+.hero-box-text {
     width: 50%;
-    height: auto;
+    line-height: 35px;
 }
 
+.hero-box-text h2 {
+    font-size: 40px;
+    font-weight: 900;
+    width: 75%;
+}
+
+.hero-box-text p {
+    width: 100%;
+}
+
+.levin-team {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+
+/* About Company Stylesheet */
+
+.about-company {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    margin-top: 15.5%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow:inset 2px -1px 10px var(--light-gray) ; 
+}
+
+.about-company section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.heading-company {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.heading-company h6 {
+    color: var(--light-blue);
+}
+
+.text-company {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.icon-container {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.icon-container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.icon-list {
+    text-align: center;
+    display: block;
+}
+
+/* Smart Management Stylesheet */
+
+.sm-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Vazirmatn;
+}
+
+.sm-textbox {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.sm-textbox h2 , .sm-textbox h6 {
+    width: 100%;
+}
+
+.sm-textbox h2 {
+    font-weight: 900;
+}
+
+.sm-textbox h6 {
+    margin-top: 1%;
+    font-weight: 400;
+}
+
+.sm-textbox ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.sm-textbox-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.sm-textbox-list p {
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Respawnsive Code */
 
 @media (max-width: 1024px) {
+    /* Herobox */
     .hero-box {
         flex-direction: column; 
-    }
-
-    .hero-box img {
-        width: 70%;
-        margin-bottom: 1.5rem;
     }
 
     .hero-box-text {
@@ -32,20 +173,54 @@
         flex-wrap: wrap;
     }
 
-    .hero-box-text h1,
+    .hero-box-text h2,
     .hero-box-text p,
     .hero-box-text div {
         width: 90%; 
         text-align: center;
 }
 
-@media (max-width: 768px) {
+    /* About Company */
+    .icon-list img {
+        width: 55%;
+    }
 
-    .hero-box-text h1,
-    .hero-box-text p,
-    .hero-box-text div {
-        width: 75%; 
-        margin: 15px;
+    /* Smart Management */
+    .sm-container {
+        flex-direction: column-reverse;
+    }
+    .sm-textbox {
+        width: 100%;
+    }
+    .sm-Baner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .sm-Baner img {
+        width: 100%;
     }
 }
+@media (max-width: 768px) {
+    /* Herobox */
+    .hero-box-text h2,
+    .hero-box-text p,
+    .hero-box-text div {
+        width: 80%; 
+        margin: 15px;
+    }
+    .levin-team {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    /* About Company */
+    .text-company {
+        width: 75%;
+    }
+
+        /* Smart Management */
+        .sm-textbox {
+            margin-top: 0;
+        }
 }

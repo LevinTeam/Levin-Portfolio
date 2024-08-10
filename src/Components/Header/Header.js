@@ -10,8 +10,8 @@ const Header = () => {
       {
         id: 1,
         text: 'ثبت نام | ورود',
-        backgroundColor: '#DD226D',
-        textColor: '#fff'
+        backgroundColor: 'var(--primary-blue)',
+        textColor: 'var(--white)'
       }
     ];
   
@@ -72,13 +72,13 @@ const Header = () => {
               <li className='header__li-link'>
                 <a className='link' href='#'>
                   بیشتر
-                  <img src='Images/Logos/arrow-down.png' alt='' />
+                  <img src='Images/Logos/arrow-down.svg' alt='' />
                 </a>
               </li>
             </ul>
           </div>
           <div className='header-logo'>
-            <img src='Images/Logo/Header-Icon.png' className='Header-img' alt='' />
+            <img src='Images/Logo/Header-Icon.svg' className='Header-img' alt='' />
           </div>
           <div className='menu-icon' onClick={toggleMenu}>
             <div className={`menu-icon-line ${menuOpen ? 'open' : ''}`}></div>

@@ -6,12 +6,12 @@ const Levinteam = () => {
     <div className="hero">
       <div className="hero-wrapper">
         <div className="hero-block">
-          <h1 className="hero-title">
+          <h3 className="hero-title">
             <span className="hero-title-text">
               <strong>Levin</strong>
                 Team
             </span>
-          </h1>
+          </h3>
         </div>
       </div>
     </div>
