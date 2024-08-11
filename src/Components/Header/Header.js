@@ -1,10 +1,46 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import Btn from '../../assest/Btn/Btn';
+import Ninjalink from '../../assest/Ninja-Link/Ninjalink';
 
 const Header = () => {
     const [scroll, setScroll] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const links = [
+
+      {
+        url: '#',
+        topText: ' خانه ',
+        bottomText: ' خانه ',
+      },
+      {
+        url: '#',
+        topText: ' محصولات ',
+        bottomText: ' محصولات ',
+      },
+      {
+        url: '#',
+        topText: ' تعرفه ',
+        bottomText: ' تعرفه ',
+      },
+      {
+        url: '#',
+        topText: ' وبلاگ ',
+        bottomText: ' وبلاگ ',
+      },
+      {
+        url: '#',
+        topText: ' سرویس ها ',
+        bottomText: ' سرویس ها ',
+      },
+      {
+        url: '#',
+        topText: ' بیشتر ',
+        bottomText: ' بیشتر ',
+      }
+
+    ];
   
     const btns = [
       {
@@ -44,37 +80,17 @@ const Header = () => {
           </div>
           <div className='header-links'>
             <ul className='header-items'>
-              <li className='header__li-link'>
-                <a className='link' href='#'>
-                  محصولات
-                </a>
-              </li>
-              <li className='header__li-link'>
-                <a className='link' href='#'>
-                  تعرفه
-                </a>
-              </li>
-              <li className='header__li-link'>
-                <a className='link' href='#'>
-                  وبلاگ
-                </a>
-              </li>
-              <li className='header__li-link'>
-                <a className='link' href='#'>
-                  خانه
-                </a>
-              </li>
-              <li className='header__li-link'>
-                <a className='link' href='#'>
-                  سرویس ها
-                </a>
-              </li>
-              <li className='header__li-link'>
-                <a className='link' href='#'>
-                  بیشتر
-                  <img src='Images/Logos/arrow-down.svg' alt='' />
-                </a>
-              </li>
+            
+    
+      {links.map((link, index) => (
+                <li className='header__li-link'>
+                    <Ninjalink
+                      key={index}
+                      url={link.url}
+                      topText={link.topText}
+                      bottomText={link.bottomText}
+                    />
+                </li>  ))}
             </ul>
           </div>
           <div className='header-logo'>
@@ -88,39 +104,21 @@ const Header = () => {
           {menuOpen && (
             <div className='mobile-menu'>
               <ul className='mobile-menu-items'>
-                <li className='mobile-menu-item'>
-                  <a className='link' href='#'>
-                    محصولات
-                  </a>
-                </li>
-                <li className='mobile-menu-item'>
-                  <a className='link' href='#'>
-                    تعرفه
-                  </a>
-                </li>
-                <li className='mobile-menu-item'>
-                  <a className='link' href='#'>
-                    وبلاگ
-                  </a>
-                </li>
-                <li className='mobile-menu-item'>
-                  <a className='link' href='#'>
-                    خانه
-                  </a>
-                </li>
-                <li className='mobile-menu-item'>
-                  <a className='link' href='#'>
-                    سرویس ها
-                  </a>
-                </li>
-                <li className='mobile-menu-item'>
-                  <a className='link' href='#'>
-                    بیشتر
-                  </a>
-                </li>
+
                 <li className='mobile-menu-item'>
                   <Btn {...btns[0]} />
                 </li>
+
+              {links.map((link, index) => (
+                <li className='mobile-menu-item'>
+                    <Ninjalink
+                      key={index}
+                      url={link.url}
+                      topText={link.topText}
+                      bottomText={link.bottomText}
+                    />
+                </li>  ))}
+                
               </ul>
             </div>
           )}

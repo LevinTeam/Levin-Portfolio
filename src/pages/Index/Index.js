@@ -25,6 +25,17 @@ export default function Index() {
       {id:6 , src: "Images/Logo/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
     ]
 
+    const cardData = [
+      { id: 1, src: '#' , name: ' فرانت اند ', description: 'طراحی رابط کاربری مدرن و واکنش‌گرا برای تجربه‌ای جذاب.' },
+      { id: 2, src: '#' , name: ' بک اند ', description: 'پیاده‌سازی منطق قدرتمند و امن برای پشت‌صحنه اپلیکیشن‌ها.' },
+      { id: 3, src: '#' , name: ' سئو ', description: 'بهینه‌سازی سایت برای بهبود رتبه در موتورهای جستجو.' },
+      { id: 4, src: '#' , name: ' دیزاین ', description: 'خلق طراحی‌های گرافیکی منحصربه‌فرد و کاربرپسند.' },
+      { id: 5, src: '#' , name: ' ربات تلگرام ', description: 'توسعه ربات‌های تلگرام برای خدمات خودکار و سریع.' },
+      { id: 6, src: '#' , name: ' ربات دیسکورد ', description: 'ساخت ربات‌های دیسکورد برای بهبود مدیریت و تعامل.' },
+      { id: 7, src: '#' , name: ' امنیت ', description: 'افزایش امنیت با شناسایی و رفع آسیب‌پذیری‌ها.' },
+      { id: 8, src: '#' , name: ' ریدیزاین ', description: 'بازطراحی مدرن برای بهبود تجربه کاربری و برند.' }
+    ];
+
 
   return (
     <>
@@ -99,6 +110,60 @@ export default function Index() {
       </figure>
 
     </div>
+
+{/* Card List =>  */}
+
+    <div className='card-list'>
+      <div className='card-animation'>
+      <ul> 
+
+        {/* Desctop */}
+      {cardData.map((data) => (
+        <li key={data.id}>
+          <div className='card'>
+              <a href={data.src}><span className='model-name'>
+                {data.name}  </span>
+              <span> {data.description} </span>
+            </a>
+          </div>
+        </li>
+        ))}
+
+      </ul>
+    <div className='last-circle'></div>
+	  <div className='second-circle'></div>
+	  <div className='mask'></div>
+	  </div>
+
+        <div className='regular-card-animation'>
+          <ul>
+{/* Mobile */}
+      {cardData.map((data) => (
+        <li key={data.id}>
+          <div className='regular-card'>
+              <a href={data.src}><span className='model-name'>
+                {data.name}  </span>
+              <span> {data.description} </span>
+            </a>
+          </div>
+        </li>
+        ))}
+          </ul>
+        </div>
+
+	  <div className='center-circle'>
+      <img loading='lazy' src="Images/Baners/Card-List-Ninja.svg" alt="" />
+    </div>
+      </div>
+
+
+
+
+
+
+
+
+
 
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
