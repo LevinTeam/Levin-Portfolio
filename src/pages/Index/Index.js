@@ -3,6 +3,7 @@ import './Index.css'
 import Header from '../../Components/Header/Header'
 import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
+import TiltCard from '../../Components/Header/TiltCard/TiltCard'
 
 export default function Index() {
 
@@ -25,6 +26,8 @@ export default function Index() {
       {id:6 , src: "Images/Logo/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
     ]
 
+    // Card List =>
+
     const cardData = [
       { id: 1, src: '#' , name: ' فرانت اند ', description: 'طراحی رابط کاربری مدرن و واکنش‌گرا برای تجربه‌ای جذاب.' },
       { id: 2, src: '#' , name: ' بک اند ', description: 'پیاده‌سازی منطق قدرتمند و امن برای پشت‌صحنه اپلیکیشن‌ها.' },
@@ -35,6 +38,14 @@ export default function Index() {
       { id: 7, src: '#' , name: ' امنیت ', description: 'افزایش امنیت با شناسایی و رفع آسیب‌پذیری‌ها.' },
       { id: 8, src: '#' , name: ' ریدیزاین ', description: 'بازطراحی مدرن برای بهبود تجربه کاربری و برند.' }
     ];
+
+    // CEO Card Info
+
+    const CEO = [
+      {id: 1 , name:'Shervin Fatahi' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'FRONT' , about: ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ' , portfolio: '#' },
+      {id: 2 , name:'Pouya Alijany' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'SEO' , about: ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ' , portfolio: '#' },
+      {id: 3 , name:'Arman Mohebrad' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'BACK' , about: ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ' , portfolio: '#' },
+    ]
 
 
   return (
@@ -65,9 +76,9 @@ export default function Index() {
         <div className='text-company'>
           <div className='heading-company'>
             <img src="Images/Logo/Ninja-Mask.svg" alt="" />
-    
             <h6> به سایت خودت فکر کردی؟ </h6>
           </div>
+
           <h2> تیم درستی رو انتخاب کردی! </h2>
           <p>
           تیم لوین اینجاست تا به کارآفرین‌ها کمک کنه ایده‌هاشون رو به محصول تبدیل کنن و با موفقیت وارد بازار کنن. ما به شرکت‌هایی که در حال رشد هستن کمک می‌کنیم تا با پیدا کردن تیم‌های توسعه‌ی حرفه‌ای و آماده، کار ساخت و راه‌اندازی رو با سرعت و کیفیت شروع کنن. اگر شما هم دنبال یه تیم متخصص برای پیشبرد پروژه‌هاتون هستید، ما کنارتونیم!
@@ -75,17 +86,19 @@ export default function Index() {
         </div>
       </section>
 
-      <figure className='icon-container'>
-        <ul>
+      {/* <figure > */}
+        <ul className='icon-container'>
             {iconList.map((icon) => (
               <li className="icon-list" key={icon.id}>
+                <div className='img-company' >
                 <img src={icon.src} alt={icon.title} />
+                </div>
                 <p>{icon.title}</p>
                 <p>{icon.count}</p>
               </li>
             ))}
         </ul>
-      </figure>
+      {/* </figure> */}
     </div>
 
   {/* Smart Management => */}
@@ -157,6 +170,21 @@ export default function Index() {
       </div>
 
 
+{/* CEO card */} 
+
+
+<div className='tiltcard'>
+            {CEO.map( (info) => (
+              <TiltCard 
+              key={info.id}
+              job={info.job}
+              name={info.name}
+              profile={info.profile}
+              about={info.about}
+              portfolio={info.portfolio}
+              />
+            ))}
+</div>
 
 
 

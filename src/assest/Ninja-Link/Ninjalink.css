@@ -1,13 +1,14 @@
 .ninja-div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;;
 }
 
 .ninja-link {
     position: relative;
     display: inline-block;
     line-height: 1em;
+    position: relative;
 }
 
 .ninja-link--top {
@@ -22,7 +23,6 @@
 .ninja-link--top:after {
     content: "";
     position: absolute;
-    
     top: 36%;
     left: 0;
     width: 100%;
