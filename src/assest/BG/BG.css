@@ -1,9 +1,12 @@
 .area{
-    background: #fff; /* rgb(31, 32, 65) */  
+    background: var(--bg-btn-color);  
     width: 100%;
     height:100vh;
     position: fixed;
     z-index: -1;
+    right: 0;
+    left: 0;
+    transition: all .3s ease;
 }
 
 .circles{
@@ -26,7 +29,7 @@
     font-weight: 900;
     user-select: none;
     transition: all ease-in-out;
-    color: #0e86f0; /* #0ef0ad */
+    color: var(--primary); /* #0ef0ad */
 }
 
 .circles li:nth-child(1){

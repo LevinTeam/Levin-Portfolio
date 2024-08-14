@@ -1,0 +1,9 @@
+.UX-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 3rem;
+    left: 2rem;
+    z-index: 1000;
+}

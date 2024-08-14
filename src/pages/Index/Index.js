@@ -4,10 +4,12 @@ import Header from '../../Components/Header/Header'
 import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
 import TiltCard from '../../Components/Header/TiltCard/TiltCard'
+import UXbox from '../../Components/UXbox/UXbox'
 
 export default function Index() {
 
   // About Company Icon List =>
+
   const iconList = [
     {id:1 , src: "Images/company-icon/Project.svg", title: "Projects", count: "+10" },
     {id:2 , src: "Images/company-icon/Clients.svg", title: "Clients", count: "+10" },
@@ -60,8 +62,8 @@ export default function Index() {
         <div>
             <Btn 
             text="استخدام نینجا" 
-            backgroundColor="var(--primary-blue)" 
-            textColor="var(--white)"
+            backgroundColor="var(--primary)" 
+            textColor="var(--bg-btn-color)"
             />
         </div>
         </div>        
@@ -75,7 +77,13 @@ export default function Index() {
       <section>
         <div className='text-company'>
           <div className='heading-company'>
-            <img src="Images/Logo/Ninja-Mask.svg" alt="" />
+            {/* SVG ninja file for About Company => */}
+          <svg width="160" height="55" viewBox="0 0 160 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" y="0.5" width="158.688" height="54.4893" rx="4" fill="var(--primary)"/>
+          <ellipse cx="42.0192" cy="29.7447" rx="11.5831" ry="13.7546" fill="#121632"/>
+          <ellipse cx="117.669" cy="29.7447" rx="11.5831" ry="13.7546" fill="#121632"/>
+          </svg>
+
             <h6> به سایت خودت فکر کردی؟ </h6>
           </div>
 
@@ -86,7 +94,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* <figure > */}
+      <figure >
         <ul className='icon-container'>
             {iconList.map((icon) => (
               <li className="icon-list" key={icon.id}>
@@ -98,30 +106,7 @@ export default function Index() {
               </li>
             ))}
         </ul>
-      {/* </figure> */}
-    </div>
-
-  {/* Smart Management => */}
-
-    <div className='sm-container'>
-
-      <section className='sm-textbox'>
-        <h2> زمانت را هوشمندانه مدیریت کن! </h2>
-        <h6> درآمدت را با بهره‌وری بیشتر افزایش بده. </h6>
-        <ul>
-          {smTextBox.map((textBox) => (
-              <li className="sm-textbox-list" key={textBox.id}>
-                <img src={textBox.src} />
-                <p>{textBox.text}</p>
-              </li>
-          ))}
-        </ul>
-      </section>
-      
-      <figure className='sm-Baner'>
-        <img src="Images/Baners/sm-Baner.svg" alt="" />
       </figure>
-
     </div>
 
 {/* Card List =>  */}
@@ -132,10 +117,12 @@ export default function Index() {
 
         {/* Desctop */}
       {cardData.map((data) => (
-        <li key={data.id}>
+        <li key={data.id} style={{background: 'none'}}>
           <div className='card'>
-              <a href={data.src}><span className='model-name'>
-                {data.name}  </span>
+              <a href={data.src}>
+                <span className='model-name'>
+                {data.name}  
+                </span>
               <span> {data.description} </span>
             </a>
           </div>
@@ -165,9 +152,41 @@ export default function Index() {
         </div>
 
 	  <div className='center-circle'>
-      <img loading='lazy' src="Images/Baners/Card-List-Ninja.svg" alt="" />
+        {/* SVG ninja file for Cart List => */}
+      <svg width="165" height="165" viewBox="0 0 314 314" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="223.16" y="7.91786" width="28.5954" height="75.8582" rx="14.2977" transform="rotate(8.28448 223.16 7.91786)" fill="var(--ninja)"/>
+      <rect x="278.953" y="32.3466" width="28.5954" height="75.8582" rx="14.2977" transform="rotate(84.0476 278.953 32.3466)" fill="var(--ninja)"/>
+      <circle cx="157" cy="157" r="136.183" transform="rotate(-9.31302 157 157)" fill="var(--ninja)" stroke="#818181"/>
+      <rect x="48.5011" y="135.273" width="207.105" height="77.9942" rx="3.5" transform="rotate(-9.31302 48.5011 135.273)" fill="var(--primary)"/>
+      <path d="M91.8673 183.121L89.9409 171.37C88.3237 161.505 95.0097 152.197 104.875 150.58V150.58C114.739 148.962 124.047 155.648 125.665 165.513L127.591 177.264" stroke="#121632" stroke-width="16" stroke-linecap="round"/>
+      <path d="M191.364 165.386L189.438 153.635C187.821 143.77 194.507 134.462 204.372 132.845V132.845C214.236 131.228 223.544 137.914 225.162 147.778L227.088 159.53" stroke="#121632" stroke-width="16" stroke-linecap="round"/>
+      </svg>
     </div>
       </div>
+
+
+  {/* Smart Management => */}
+
+    <div className='sm-container'>
+
+      <section className='sm-textbox'>
+        <h2> زمانت را هوشمندانه مدیریت کن! </h2>
+        <h6> درآمدت را با بهره‌وری بیشتر افزایش بده. </h6>
+        <ul>
+          {smTextBox.map((textBox) => (
+              <li className="sm-textbox-list" key={textBox.id}>
+                <img src={textBox.src} />
+                <p>{textBox.text}</p>
+              </li>
+          ))}
+        </ul>
+      </section>
+      
+      <figure className='sm-Baner'>
+        <img src="Images/Baners/sm-Baner.svg" alt="" />
+      </figure>
+
+    </div>
 
 
 {/* CEO card */} 
@@ -191,10 +210,10 @@ export default function Index() {
 
 
 
-
-
-
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+            <UXbox></UXbox>
+
     </>
   )
 }

@@ -1,24 +1,38 @@
 /* Lite Theme */
 
-:root {
+/* :root {
     --primary-blue: #007bff;
     --light-blue: #5aa9ff;
     --dark-blue: #004085;
     --white: #fff;
     --light-gray: #343a40;
     --lighter-gray: #f8f9fa;
-}
+} */
+
+/* Rename */
+/* :root {
+    --primary: rgb(0, 123, 255);
+    --light: rgb(90, 169, 255);
+    --dark: rgb(0, 64, 133);
+    --bg-btn-color: #fff;
+    --text: #000;
+    --gray: #343a40;
+    --light-gray: #f8f9fa;
+    --dark-gray: #2c2c54;
+    --ninja: #e4ffe8;
+    --span-text: #5C007A;
+} */
 
 /* Dark Theme */
 
-:root {
-    --primary-green: #0ef0ad;
-    --dark-green: #0ba37d;
-    --main-dark: #1f2041;
+/* :root {
+    --primary-green: rgb(14, 240, 173);
+    --dark-green: rgb(11, 163, 125);
+    --main-dark: rgb(31, 32, 65);
     --dark-gray: #b8b8d1;
     --darker-gray: #2c2c54;
-    --black: #000;
-}
+    --black: rgb(220, 223, 229);
+} */
 
 /* Fonts */
 

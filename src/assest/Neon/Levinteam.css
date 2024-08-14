@@ -22,7 +22,7 @@
   
   .hero-title {
     animation: neon-blink 3s infinite alternate;
-    color: var(--primary-blue);
+    color: var(--primary);
     font-family: var(--font-family-display);
     font-size: 45px;
     text-shadow: var(--neon-effect);

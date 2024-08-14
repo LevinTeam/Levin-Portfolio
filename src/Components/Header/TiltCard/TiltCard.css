@@ -39,12 +39,6 @@
 	box-sizing: border-box;
 }
 
-.glassmorphic-card .imgBox i {
-	font-size: max(80px);
-	color: rgba(255,255,255, 0.1);
-	box-sizing: border-box;
-}
-
 .glassmorphic-card .contentBox {
 	position: relative;
 	margin-top: 20px;
@@ -81,14 +75,14 @@
 
 .glassmorphic-card .contentBox h3 {
 	font-size: 1.8em;
-	color: var(--light-gray);
+	color: var(--text);
 	z-index: 1;
 	box-sizing: border-box;
 }
 
 .glassmorphic-card .contentBox p {
 	font-size: 1em;
-	color: var(--light-gray);
+	color: var(--text);
 	font-weight: 300;
 	box-sizing: border-box;
 }
@@ -98,10 +92,10 @@
 	display: inline-block;
 	padding: 8px 20px;
 	margin-top: 15px;
-	background: var(--light-blue);
+	background: var(--light);
 	border-top: 1px solid rgba(255,255,255,0.1);
 	border-left: 1px solid rgba(255,255,255,0.1);
-	color: #000;
+	color: var(--bg-btn-color);
 	border-radius: 20px;
 	text-decoration: none;
 	font-weight: 500;

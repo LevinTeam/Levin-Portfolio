@@ -13,6 +13,7 @@
 .hero-box-text {
     width: 50%;
     line-height: 35px;
+    color: var(--text);
 }
 
 .hero-box-text h2 {
@@ -63,7 +64,7 @@
 }
 
 .heading-company h6 {
-    color: var(--light-blue);
+    color: var(--light);
 }
 
 .text-company {
@@ -73,6 +74,7 @@
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
+    color: var(--text);
 }
 
 .icon-container {
@@ -81,6 +83,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    color: var(--text);
 }
 
 .img-company {
@@ -99,58 +102,6 @@
 .icon-list {
     text-align: center;
 }
-
-/* Smart Management Stylesheet */
-
-.sm-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-family: Vazirmatn;
-}
-
-.sm-textbox {
-    display: flex;
-    width: 50%;
-    flex-wrap: wrap;
-}
-
-.sm-textbox h2 , .sm-textbox h6 {
-    width: 100%;
-}
-
-.sm-textbox h2 {
-    font-weight: 900;
-}
-
-.sm-textbox h6 {
-    margin-top: 1%;
-    font-weight: 400;
-}
-
-.sm-textbox ul {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 3%;
-}
-
-.sm-textbox-list {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: start;
-    padding: 5px;
-    font-weight: 500;
-}
-
-.sm-textbox-list p {
-    padding-right: 5px;
-}
-
 
 /* Desktop Card List Stylsheet */
 
@@ -195,55 +146,61 @@
 	align-items: flex-start;
 	padding: 16px 24px;
 	gap: 8px;
-	background: #FFFFFF;
-	box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 4px 12px var(--light);
 	border-radius: 12px;
 	font-family: Vazirmatn;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 20px;
-	color: #535062;
 	animation: rotateCCW calc(40 * 1s) cubic-bezier(0.000, 0.37, 1.000, 0.63) infinite;
 }
 
 .card a {
     text-decoration: none;
-	color: unset;
+	color: var(--text);
 }
 
 .model-name {
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 150%;
-	color: #3B2ED0;
+	color: var(--span-text);
 	display: block;
 }
 
 
 .card-animation li:nth-child(1), li:nth-child(1) .card {
 	animation-delay: calc((40/8) * 0s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(2), li:nth-child(2) .card {
 	animation-delay: calc((40/8) * -1s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(3), li:nth-child(3) .card {
 	animation-delay: calc((40/8) * -2s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(4), li:nth-child(4) .card {
 	animation-delay: calc((40/8) * -3s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(5), li:nth-child(5) .card {
 	animation-delay: calc((40/8) * -4s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(6), li:nth-child(6) .card {
 	animation-delay: calc((40/8) * -5s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(7), li:nth-child(7) .card {
 	animation-delay: calc((40/8) * -6s);
+    background-color: var(--bg-btn-color);
 }
 .card-animation li:nth-child(8), li:nth-child(8) .card {
 	animation-delay: calc((40/8) * -7s);
+    background-color: var(--bg-btn-color);
 }
 
 @keyframes rotateCW {
@@ -282,7 +239,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background: #FFF;
+	background: #d1d1d1;
 	box-shadow: 0px 18px 36px -18px rgba(12, 5, 46, 0.3), 0px 30px 60px -12px rgba(12, 5, 46, 0.25);
 	border-radius: 50%;
 }
@@ -373,6 +330,58 @@
     flex-direction: column;
 }
 
+/* Smart Management Stylesheet */
+
+.sm-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Vazirmatn;
+}
+
+.sm-textbox {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    color: var(--text);
+}
+
+.sm-textbox h2 , .sm-textbox h6 {
+    width: 100%;
+}
+
+.sm-textbox h2 {
+    font-weight: 900;
+}
+
+.sm-textbox h6 {
+    margin-top: 1%;
+    font-weight: 400;
+}
+
+.sm-textbox ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.sm-textbox-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.sm-textbox-list p {
+    padding-right: 5px;
+}
+
 /* Tilt Card */
 
 .tiltcard {
@@ -423,6 +432,18 @@
         width: 55%;
     }
 
+    /* Card List */
+    .card-animation,
+    .last-circle , 
+    .second-circle ,
+    .mask ,
+    .center-circle {
+	display: none;
+    }
+    .regular-card-animation {
+        display: flex;
+    }
+    
     /* Smart Management */
     .sm-container {
         flex-direction: column-reverse;
@@ -439,17 +460,7 @@
         width: 100%;
     }
 
-    /* Card List */
-    .card-animation,
-    .last-circle , 
-    .second-circle ,
-    .mask ,
-    .center-circle {
-	display: none;
-    }
-    .regular-card-animation {
-        display: flex;
-    }
+
 }
 @media (max-width: 768px) {
     /* Herobox */
@@ -469,13 +480,15 @@
         width: 75%;
     }
 
+    /* Card List */
+    .regular-card-animation ul li {
+        width: 100%;
+    }
+
     /* Smart Management */
     .sm-textbox {
         margin-top: 0;
     }
 
-    /* Card List */
-    .regular-card-animation ul li {
-        width: 100%;
-    }
+
 }
