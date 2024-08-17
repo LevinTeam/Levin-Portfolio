@@ -37,7 +37,7 @@ const ToggleSwitch = () => {
       root.style.setProperty('--dark' , '#0ba37d')
       root.style.setProperty('--bg-btn-color' , '#1f2041')
       root.style.setProperty('--text' , '#fff')
-      // root.style.setProperty('--ninja' , '#DCDFE5')
+      root.style.setProperty('--ninja' , '#121623')
       root.style.setProperty('--span-text' , '#0ba37d')
     }
     else {
@@ -54,12 +54,12 @@ const ToggleSwitch = () => {
 
 
   return (
-<div class='toggle-btn' >
+<div className='toggle-btn' >
 <input type='checkbox' id='c3d'
         checked={isDarkMode}
         onChange={handleToggle}
 />
-<label for='c3d'></label>
+<label htmlFor='c3d'></label>
 </div>
   );
 };

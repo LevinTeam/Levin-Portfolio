@@ -9,12 +9,11 @@ const TiltCard = ({ job , profile , about , portfolio , name }) => {
       const tiltNode = tiltRef.current;
       if (tiltNode) {
         VanillaTilt.init(tiltNode, {
-          // reverse :  true,
-          gyroscope: true,
+          reverse :  true,
           max: 5,
           speed: 200,
           glare: true,
-          'max-glare': 0.5,
+          'max-glare': .5,
         });
       }
   

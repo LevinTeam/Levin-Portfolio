@@ -1,10 +1,8 @@
 import React from 'react'
 import './Index.css'
-import Header from '../../Components/Header/Header'
 import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
-import TiltCard from '../../Components/Header/TiltCard/TiltCard'
-import UXbox from '../../Components/UXbox/UXbox'
+import TiltCard from '../../Components/TiltCard/TiltCard'
 
 export default function Index() {
 
@@ -52,7 +50,7 @@ export default function Index() {
 
   return (
     <>
-    <Header /> <h1 style={{display:"none"}}>لوین تیمSEO</h1> {/* This section should go to the external CSS file after SEO */}
+ <h1 style={{display:"none"}}>لوین تیمSEO</h1> {/* This section should go to the external CSS file after SEO */}
 
     {/* Hero box => */}
     <div className='hero-box'>
@@ -94,7 +92,7 @@ export default function Index() {
         </div>
       </section>
 
-      <figure >
+      {/* <figure >
         <ul className='icon-container'>
             {iconList.map((icon) => (
               <li className="icon-list" key={icon.id}>
@@ -106,7 +104,7 @@ export default function Index() {
               </li>
             ))}
         </ul>
-      </figure>
+      </figure> */}
     </div>
 
 {/* Card List =>  */}
@@ -158,8 +156,8 @@ export default function Index() {
       <rect x="278.953" y="32.3466" width="28.5954" height="75.8582" rx="14.2977" transform="rotate(84.0476 278.953 32.3466)" fill="var(--ninja)"/>
       <circle cx="157" cy="157" r="136.183" transform="rotate(-9.31302 157 157)" fill="var(--ninja)" stroke="#818181"/>
       <rect x="48.5011" y="135.273" width="207.105" height="77.9942" rx="3.5" transform="rotate(-9.31302 48.5011 135.273)" fill="var(--primary)"/>
-      <path d="M91.8673 183.121L89.9409 171.37C88.3237 161.505 95.0097 152.197 104.875 150.58V150.58C114.739 148.962 124.047 155.648 125.665 165.513L127.591 177.264" stroke="#121632" stroke-width="16" stroke-linecap="round"/>
-      <path d="M191.364 165.386L189.438 153.635C187.821 143.77 194.507 134.462 204.372 132.845V132.845C214.236 131.228 223.544 137.914 225.162 147.778L227.088 159.53" stroke="#121632" stroke-width="16" stroke-linecap="round"/>
+      <path d="M91.8673 183.121L89.9409 171.37C88.3237 161.505 95.0097 152.197 104.875 150.58V150.58C114.739 148.962 124.047 155.648 125.665 165.513L127.591 177.264" stroke="#121632" strokeWidth="16" strokeLinecap="round"/>
+      <path d="M191.364 165.386L189.438 153.635C187.821 143.77 194.507 134.462 204.372 132.845V132.845C214.236 131.228 223.544 137.914 225.162 147.778L227.088 159.53" stroke="#121632" strokeWidth="16" strokeLinecap="round"/>
       </svg>
     </div>
       </div>
@@ -192,18 +190,20 @@ export default function Index() {
 {/* CEO card */} 
 
 
-<div className='tiltcard'>
-            {CEO.map( (info) => (
-              <TiltCard 
-              key={info.id}
-              job={info.job}
-              name={info.name}
-              profile={info.profile}
-              about={info.about}
-              portfolio={info.portfolio}
-              />
-            ))}
-</div>
+
+  { <div className='tiltcard'>
+              {CEO.map( (info) => (
+                <TiltCard 
+                key={info.id}
+                job={info.job}
+                name={info.name}
+                profile={info.profile}
+                about={info.about}
+                portfolio={info.portfolio}
+                />
+              ))}
+  </div>}
+
 
 
 
@@ -211,8 +211,6 @@ export default function Index() {
 
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-            <UXbox></UXbox>
 
     </>
   )

@@ -45,7 +45,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow:inset 2px -1px 10px var(--light-gray) ; 
+    box-shadow:inset 2px -1px 10px var(--light) ; 
 }
 
 .about-company section {
@@ -61,6 +61,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    font-family: vazirmatn;
 }
 
 .heading-company h6 {
@@ -162,7 +163,7 @@
 }
 
 .model-name {
-	font-weight: 500;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 150%;
 	color: var(--span-text);
@@ -239,7 +240,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background: #d1d1d1;
+	background: #fcd5ffc3;
 	box-shadow: 0px 18px 36px -18px rgba(12, 5, 46, 0.3), 0px 30px 60px -12px rgba(12, 5, 46, 0.25);
 	border-radius: 50%;
 }
@@ -294,41 +295,44 @@
 .regular-card-animation {
     width: 100%;
     display: none;
+    flex-wrap: wrap;
 }
 
 .regular-card-animation ul {
     width: 100%; 
     list-style-type: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 } 
 
-.regular-card-animation ul li{
-    width: 50%;
-    padding: 10px;
+.regular-card-animation ul li {
+    width: 48%; 
+    margin: 1%;
+    box-sizing: border-box;
 }
 
 .regular-card {
-    background: #FFFFFF;
-	box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.1);
-	border-radius: 12px;
-	font-family: Vazirmatn;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 20px;
-	color: #535062;
+    background: var(--bg-btn-color);
+    box-shadow: inset 0px 4px 12px var(--light);
+    border-radius: 12px;
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text);
     padding: 16px 24px;
 }
 
 .regular-card a {
     text-decoration: none;
-	color: unset;
+    color: unset;
     display: flex;
     flex-direction: column;
 }
+
 
 /* Smart Management Stylesheet */
 

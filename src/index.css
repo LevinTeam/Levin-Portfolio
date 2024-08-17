@@ -38,7 +38,26 @@
 
 @font-face {
     font-family: Iran-Yekan;
-    src: url(../public/Fonts/BYekan+.ttf) , url(../public/Fonts/BYekan+\ Bold.ttf) ;
+    src: url(../public/Fonts/Iran-Yekan/BYekan+.ttf) , url(../public/Fonts/Iran-Yekan/BYekan+\ Bold.ttf) ;
+}
+
+/* @font-face {
+    font-family: Vazirmatn;
+    src: url(../public//Fonts/Vazirmatn/Vazirmatn-Black.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-Bold.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-ExtraBold.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-ExtraLight.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-Light.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-Medium.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-Regular.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-SemiBold.ttf) ,
+    url(../public//Fonts/Vazirmatn/Vazirmatn-Thin.ttf) ,
+    ;
+} */
+
+@font-face {
+    font-family: Monoton;
+    src: url(../public/Fonts/Monoton/Monoton-Regular.ttf);
 }
 
 /* Main Style */ 
