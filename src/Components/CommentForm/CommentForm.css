@@ -1,0 +1,129 @@
+/* body {
+    background-color: #e60000;
+} */
+.feedback-form {
+    direction: rtl;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0F4C75;
+    border: 2px solid #3282B8;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px #3282B8;
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.feedback-form h2 {
+    text-align: center;
+    color: #BBE1FA;
+    background: #0F4C75;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    background: #0F4C75;
+}
+
+.form-group label {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #BBE1FA;
+    background: #0F4C75;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3282B8;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.duo {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    background: #0F4C75;
+    align-content: center;
+}
+
+
+input[type=text] , input[type=email] , input[type=number] {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #3282B8;
+    background: #0F4C75;
+    color: #BBE1FA;
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: bolder;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.btn {
+    margin-inline: auto;
+    width: 25%;
+    display: block;
+    appearance: none;
+    border: .2em solid #BBE1FA;
+    background: hsl(0 0 0/0);
+    padding: .85em 1.5em;
+    color: #fff;
+    border-radius: 2em;
+    transition: 1s;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: bolder;
+        &:hover, &:focus, &:active {
+            background: #fff;
+            color: #1B262C;
+        }
+}
+
+.comment-box {
+    border: 2px solid #3282B8;
+    border-radius: 10px;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: bolder;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    width: 100%;
+    max-width: 575px;
+    background: #0F4C75;
+    color: #BBE1FA;
+}
+.comment-box:focus {
+    outline: 1px solid #3282B8;
+}
+
+@media (max-width: 650px) {
+    .feedback-form {
+        width: 300px;
+    }
+    .btn {
+        width: 100%;
+    }
+    .duo {
+        display: block;
+    }
+    hr {
+        display: none;
+    }
+    .comment-box {
+        max-width: 275px;
+        height: 100px;
+    }
+}
