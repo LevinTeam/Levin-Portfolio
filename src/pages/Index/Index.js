@@ -42,9 +42,9 @@ export default function Index() {
     // CEO Card Info
 
     const CEO = [
-      {id: 1 , name:'Shervin Fatahi' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'FRONT' , about: ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ' , portfolio: '#' },
-      {id: 2 , name:'Pouya Alijany' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'SEO' , about: ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ' , portfolio: '#' },
-      {id: 3 , name:'Arman Mohebrad' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'BACK' , about: ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ' , portfolio: '#' },
+      {id: 1 , name:'Shervin Fatahi' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'FRONT' , about: 'من یک توسعه‌دهنده فرانت‌اند با تجربه در React، Vanilla JavaScript، Bootstrap و Sass هستم. همچنین به عنوان یک طراح وبسایت با Figma فعالیت می‌کنم.' , portfolio: '#' },
+      {id: 2 , name:'Pouya Alijany' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'SEO' , about: 'من یک متخصص SEO و توسعه‌دهنده فرانت‌اند هستم. مهارت اصلی من در کار با React و Vanilla JavaScript است، اما اولویت اصلی من بهینه‌سازی سایت‌ها برای موتورهای جستجو (SEO).' , portfolio: '#' },
+      {id: 3 , name:'Arman Mohebrad' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'BACK' , about: 'من یک توسعه‌دهنده بک‌اند هستم که با Django و Node.js کار می‌کنم. همچنین تخصص ویژه‌ای در امنیت سایت‌ها دارم. (سرباز وطن | آبدارچی شرکت)' , portfolio: '#' },
     ]
 
 
@@ -91,20 +91,6 @@ export default function Index() {
           </p>
         </div>
       </section>
-
-      {/* <figure >
-        <ul className='icon-container'>
-            {iconList.map((icon) => (
-              <li className="icon-list" key={icon.id}>
-                <div className='img-company' >
-                <img src={icon.src} alt={icon.title} />
-                </div>
-                <p>{icon.title}</p>
-                <p>{icon.count}</p>
-              </li>
-            ))}
-        </ul>
-      </figure> */}
     </div>
 
 {/* Card List =>  */}
@@ -203,11 +189,10 @@ export default function Index() {
                 />
               ))}
   </div>}
+  <footer>
+      
 
-
-
-
-
+  </footer>
 
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

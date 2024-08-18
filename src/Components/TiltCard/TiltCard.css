@@ -6,7 +6,7 @@
 	flex-direction: column;
 	z-index: 1;
 	width: calc(35% - 56px);
-	height: auto;
+	height: 28rem;
 	padding: 40px 30px;
 	margin: 0;
 	box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
@@ -17,8 +17,6 @@
 	backdrop-filter: blur(5px);
 	overflow: hidden;
 	position: relative; /* لازم برای before */
-	box-sizing: border-box; /* اطمینان از محاسبه درست ابعاد */
-
 }
 
 .glassmorphic-card:before {
@@ -76,7 +74,8 @@
 
 .glassmorphic-card .contentBox h3 {
 	font-size: 1.8em;
-	color: var(--text);
+	font-weight: 700;
+	color: var(--light);
 	z-index: 1;
 	box-sizing: border-box;
 }
@@ -84,7 +83,7 @@
 .glassmorphic-card .contentBox p {
 	font-size: 1em;
 	color: var(--text);
-	font-weight: 300;
+	font-weight: 400;
 	box-sizing: border-box;
 }
 

@@ -17,33 +17,25 @@ const useScreenWidth = (width) => {
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(document.documentElement.scrollTop);
   const [menuOpen, setMenuOpen] = useState(false);
   const isMobile = useScreenWidth(955);
 
   const links = [
     { id: 1, url: '/', topText: 'خانه', bottomText: 'خانه' },
     { id: 2, url: '#', topText: 'وبلاگ', bottomText: 'وبلاگ' },
-    { id: 3, url: '#', topText: 'سرویس‌ها', bottomText: 'سرویس‌ها' },
-    { id: 4, url: '#', topText: 'بیشتر', bottomText: 'بیشتر' },
+    { id: 4, url: '#', topText: 'مشاوره', bottomText: 'مشاوره' },
+    { id: 3, url: '#', topText: 'درباره ما', bottomText: 'درباره ما' },
+    { id: 4, url: '#', topText: 'تماس با ما', bottomText: 'تماس با ما' },
   ];
 
   const scrollHandler = () => {
-    const currentScrollPos = document.documentElement.scrollTop;
-
-    if (currentScrollPos < prevScrollPos && currentScrollPos !== 0) {
-      setScroll(true); // اسکرول به سمت بالا
-    } else {
-      setScroll(false); // اسکرول به سمت پایین
-    }
-
-    setPrevScrollPos(currentScrollPos);
+    setScroll(document.documentElement.scrollTop !== 0);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, [prevScrollPos]);
+    document.addEventListener('scroll', scrollHandler);
+    return () => document.removeEventListener('scroll', scrollHandler);
+  }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
