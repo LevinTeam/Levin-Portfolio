@@ -53,11 +53,10 @@
 .link {
     color: var(--text);
     margin: 1.1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'b-titr';
-    font-family: Iran-Yekan;
+    font-family: Vazirmatn;
 }
 
 ul {

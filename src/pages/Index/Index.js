@@ -189,13 +189,6 @@ export default function Index() {
                 />
               ))}
   </div>}
-  <footer>
-      
-
-  </footer>
-
-
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     </>
   )
