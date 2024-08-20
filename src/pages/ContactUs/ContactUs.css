@@ -1,17 +1,21 @@
 .contactUs-container {
     width: 100%;
-    height: fit-content;
+    height: max-content;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 4rem;
 }
 
 .coment-form {
-    
+    display: flex;
+    justify-content: center;
+    width: 48%;
 }
 
-.counseling {
+.counseling  {
+    width: 48%;
     text-align: center;
 }
 
@@ -71,3 +75,115 @@
     text-align: center;
     margin-top: 3rem;
 }
+
+/* Comment Form */
+
+.feedback-form {
+    width: 600px;
+    padding: 20px;
+    background-color: var(--bg-btn-color);
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px var(--dark);
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.feedback-form h2 {
+    text-align: center;
+    color: var(--text);
+    background: var(--bg-btn-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    background: var(--bg-btn-color);
+}
+
+.form-group label {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text);
+    background: var(--bg-btn-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.duo {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    background: var(--bg-btn-color);
+    align-content: center;
+}
+
+
+.contactUs-container input[type=text] , .contactUs-container input[type=email] , .contactUs-container input[type=number] {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid var(--light);
+    background: var(--bg-btn-color);
+    color: var(--text);
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: bolder;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.comment-box {
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: bolder;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    width: 100%;
+    max-width: 575px;
+    background: var(--bg-btn-color);
+    color: var(--text);
+}
+.comment-box:focus {
+    outline: 1px solid var(--light);
+}
+
+@media (max-width: 995px) {
+    .coment-form , .counseling{
+        width: 100%;
+    }
+    .feedback-form {
+        width: 100%;
+    }
+    .duo {
+        display: block;
+    }
+    .comment-box {
+        max-width: 100%;
+        height: 100px;
+    }
+    .contactUs-container {
+        flex-direction: column-reverse;
+    }
+
+}
+
+
+

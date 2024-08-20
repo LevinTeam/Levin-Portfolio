@@ -108,7 +108,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-container__footer">
-                    <p>&copy; کلیه حقوق مادی و معنوی بتعلق به شرکت لوین تیم میباشد </p>
+                    <p>&copy; کلیه حقوق مادی و معنوی متعلق به شرکت لوین میباشد </p>
                 <div className="icons-footer">
                     <ul>
                         {icons.map(icon => (

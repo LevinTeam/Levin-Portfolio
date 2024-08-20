@@ -22,10 +22,10 @@ const Header = () => {
 
   const links = [
     { id: 1, url: '/', topText: 'خانه', bottomText: 'خانه' },
-    { id: 2, url: '#', topText: 'وبلاگ', bottomText: 'وبلاگ' },
-    { id: 4, url: '#', topText: 'مشاوره', bottomText: 'مشاوره' },
-    { id: 3, url: '#', topText: 'درباره ما', bottomText: 'درباره ما' },
-    { id: 4, url: '#', topText: 'تماس با ما', bottomText: 'تماس با ما' },
+    { id: 2, url: '/', topText: 'وبلاگ', bottomText: 'وبلاگ' },
+    { id: 4, url: '/', topText: 'مشاوره', bottomText: 'مشاوره' },
+    { id: 3, url: '/', topText: 'درباره ما', bottomText: 'درباره ما' },
+    { id: 4, url: '/ContactUs', topText: 'تماس با ما', bottomText: 'تماس با ما' },
   ];
 
   const scrollHandler = () => {
@@ -48,6 +48,7 @@ const Header = () => {
             text={'ثبت نام | ورود'} 
             backgroundColor={'var(--primary)'} 
             textColor={'var(--bg-btn-color)'} 
+            to={'/login'}
           />
         </div>
         <div className='header-links'>
@@ -93,7 +94,8 @@ const Header = () => {
                 <Btn               
                   text={'ثبت نام | ورود'} 
                   backgroundColor={'var(--primary)'} 
-                  textColor={'var(--bg-btn-color)'} />
+                  textColor={'var(--bg-btn-color)'}
+                  />
               </li>
               {links.map((link) => (
                 <li key={link.id} className='mobile-menu-item'>

@@ -7,3 +7,10 @@
     left: 2rem;
     z-index: 1000;
 }
+
+@media (max-width:768px) {
+    .UX-container {
+        left: 0;
+        bottom: 1rem;
+    }
+}

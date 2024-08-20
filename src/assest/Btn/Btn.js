@@ -1,15 +1,19 @@
 import React from 'react';
 import './Btn.css';
+import { Link } from 'react-router-dom'; 
+import scrollTop from '../../utils';
 
-const Btn = ({ text, backgroundColor, textColor, border , onClick }) => {
+const Btn = ({ text, backgroundColor, textColor, border , to}) => {
+
     return (
-        <button 
+        <Link 
             className="custom-button" 
             style={{ backgroundColor: backgroundColor, color: textColor , border : border}}
-            onClick={onClick}
+            to={to}
+            onClick={scrollTop}
         >
             {text}
-        </button>
+        </Link>
     );
 };
 

@@ -7,15 +7,15 @@
     transition: all 150ms ease-in;
 }
 
-[type='checkbox'] {
+.toggle-btn [type='checkbox'] {
     display: none;
 }
 
-[type='checkbox'] + label {
+.toggle-btn [type='checkbox'] + label {
     --s: -.1;
     position: relative;
     border: solid 0.625rem #f0f0f0;
-    width: 7rem;
+    width: 6.5rem;
     height: 3rem;
     border-radius: 5rem;
     transform-style: preserve-3d;
@@ -34,17 +34,17 @@
     cursor: pointer;
 }
 
-[type='checkbox'] + label:before,
-[type='checkbox'] + label:after {
+.toggle-btn [type='checkbox'] + label:before,
+.toggle-btn [type='checkbox'] + label:after {
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
     border-radius: 50%;
     transition: 0.35s cubic-bezier(0.21, 0.61, 0.35, 1);
     content: '';
 }
 
-[type='checkbox'] + label:before {
+.toggle-btn [type='checkbox'] + label:before {
     top: calc(50% + 0.275rem);
     transform-origin: 100% 0;
     transform: translate(calc(var(--s) * (100% + 1rem))) scale(0.9) skewx(-22.5deg);
@@ -52,7 +52,7 @@
     filter: blur(3px);
 }
 
-[type='checkbox'] + label:after {
+.toggle-btn [type='checkbox'] + label:after {
     top: -0.475rem;
     left: 0.75rem;
     transform: translate(calc(var(--s) * (100% + 1rem)))
@@ -68,6 +68,22 @@
     filter: grayscale(calc(1 - var(--s)));
 }
 
-[type='checkbox']:checked + label {
-    --s: .8;
+.toggle-btn [type='checkbox']:checked + label {
+    --s: .7;
+}
+
+@media (max-width:768px) {
+    [type='checkbox'] + label {
+        width: 4rem;
+        height: 2rem;
+        --s: -.4;
+    }
+    [type='checkbox'] + label:before ,
+    [type='checkbox'] + label:after {
+        width: 1.5rem;
+        height: 1.5rem;
+}
+.toggle-btn [type='checkbox']:checked + label {
+    --s: .5;
+}
 }

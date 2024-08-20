@@ -68,6 +68,7 @@
     box-sizing: border-box;
     direction: rtl;
     user-select: none;
+    font-family: Vazirmatn;
 }
 
 ::-webkit-scrollbar-track {

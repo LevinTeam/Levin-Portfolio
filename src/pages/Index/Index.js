@@ -1,8 +1,11 @@
 import React from 'react'
+import { useState }  from 'react'
 import './Index.css'
 import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
 import TiltCard from '../../Components/TiltCard/TiltCard'
+import PoPup from '../../assest/PoPup/PoPup'
+import { Link } from 'react-router-dom'
 
 export default function Index() {
 
@@ -38,6 +41,36 @@ export default function Index() {
       { id: 7, src: '#' , name: ' امنیت ', description: 'افزایش امنیت با شناسایی و رفع آسیب‌پذیری‌ها.' },
       { id: 8, src: '#' , name: ' ریدیزاین ', description: 'بازطراحی مدرن برای بهبود تجربه کاربری و برند.' }
     ];
+
+      const [showModal, setShowModal] = useState(false);
+      const [foundData, setFoundData] = useState(null);
+    
+      const toggleModal = (event) => {
+        setShowModal(!showModal);
+        if (!showModal) {
+          document.body.classList.add('modal-open');
+    
+          const modalTarget = parseInt(event.currentTarget.value, 10);
+          const services = [
+            { id: 1, title: 'فرانت اند', paragraph: 'ما با استفاده از تکنولوژی‌های روز مانند React، Bootstrap، Tailwind و وانیلا جاوااسکریپت، رابط‌های کاربری خیره‌کننده، واکنش‌گرا و کاربرپسند می‌سازیم. تجربه‌ای بی‌نقص و لذت‌بخش را برای کاربران فراهم می‌کنیم.' },
+            { id: 2, title: 'بک اند', paragraph: 'با تسلط بر Django، Node.js، Express و دیتابیس‌های MySQL و MongoDB، زیرساخت‌هایی قدرتمند، امن و مقیاس‌پذیر برای پروژه‌های شما ایجاد می‌کنیم. تمرکز ما بر ارائه خدمات با اطمینان کامل به شماست.' },
+            { id: 3, title: 'سئو', paragraph: 'ما با استفاده از تکنیک‌های حرفه‌ای سئو، رتبه سایت شما را در موتورهای جستجو بهبود می‌بخشیم. همه جوانب، از تحقیق کلمات کلیدی تا بهینه‌سازی محتوا و لینک‌سازی، تحت پوشش قرار می‌گیرد تا ترافیک وبسایت شما به طور چشمگیری افزایش یابد.' },
+            { id: 4, title: 'دیزاین', paragraph: 'با خلق طراحی‌های گرافیکی منحصربه‌فرد و کاربرپسند، وبسایت‌هایی می‌سازیم که هم زیبا و هم کارا هستند. طراحی‌های ما کاربران را به تعامل بیشتر و مشارکت دعوت می‌کند.' },
+            { id: 5, title: 'ربات تلگرام', paragraph: 'ما ربات‌های تلگرامی را با استفاده از Node.js و جاوااسکریپت توسعه می‌دهیم که به شما امکان ارائه خدمات خودکار و سریع را می‌دهند. این ربات‌ها می‌توانند وظایف متنوعی را انجام دهند.' },
+            { id: 6, title: 'ربات دیسکورد', paragraph: 'ما ربات‌های دیسکوردی را برای بهبود مدیریت و تعامل در سرورهای آنلاین توسعه می‌دهیم. این ربات‌ها وظایف مدیریتی و تعاملات پویا با اعضا را به صورت خودکار انجام می‌دهند.' },
+            { id: 7, title: 'امنیت', paragraph: 'با شناسایی و رفع آسیب‌پذیری‌ها، امنیت وبسایت و اپلیکیشن‌های شما را به حداکثر می‌رسانیم. ما از جدیدترین روش‌ها و ابزارهای امنیتی برای محافظت از سیستم شما استفاده می‌کنیم.' },
+            { id: 8, title: 'ریدیزاین', paragraph: 'ما وبسایت شما را با رویکردی مدرن و خلاقانه بازطراحی می‌کنیم تا همگام با ترندهای جدید و نیازهای کاربران باشد. این بازطراحی تجربه کاربری را ارتقا می‌دهد و نرخ تبدیل را افزایش می‌دهد.' },
+        ];
+        
+    
+          const found = services.find(modalData => modalData.id === modalTarget);
+          setFoundData(found);
+          console.log(foundData);
+          
+        } else {
+          document.body.classList.remove('modal-open');
+        }
+      };
 
     // CEO Card Info
 
@@ -95,20 +128,24 @@ export default function Index() {
 
 {/* Card List =>  */}
 
+    <PoPup show={showModal} data={foundData} onClose={toggleModal} />
+
     <div className='card-list'>
       <div className='card-animation'>
       <ul> 
 
         {/* Desctop */}
       {cardData.map((data) => (
-        <li key={data.id} style={{background: 'none'}}>
+        <li onClick={toggleModal} key={data.id} style={{background: 'none'}} value={data.id}> 
           <div className='card'>
-              <a href={data.src}>
+              <div>
                 <span className='model-name'>
                 {data.name}  
                 </span>
-              <span> {data.description} </span>
-            </a>
+              <span> 
+                {data.description} 
+              </span>
+            </div>
           </div>
         </li>
         ))}

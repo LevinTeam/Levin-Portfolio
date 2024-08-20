@@ -1,12 +1,14 @@
 import Index from './pages/Index/Index'
-import NotFound from './pages/Error/NotFound'
 import ContactUs from './pages/ContactUs/ContactUs'
+import NotFound from './pages/Error/NotFound'
+import Login from './pages/Login/Login'
 
 
 const routes = [
     {path: '/' , element : <Index />} , 
-    {path: '*' , element : <NotFound />},
-    {path: '/ContactUs' , element : <ContactUs />}
+    {path: '/ContactUs' , element : <ContactUs />} , 
+    {path: '/Login' , element : <Login />} , 
+    {path: '*' , element : <NotFound />}
 ]
 
 export default routes
