@@ -1,5 +1,5 @@
 :root {
-    --font-family-display: Monoton, Arial, sans-serif;
+    --font-family-display: Monoton, Arial, sans-serif; 
     --neon-effect: 0 0 0 transparent,
       0 0 20px rgb(0, 123, 255),
       0 0 50px rgba(0, 123, 255, .5),
@@ -23,7 +23,7 @@
   .hero-title {
     animation: neon-blink 3s infinite alternate;
     color: var(--primary);
-    font-family: var(--font-family-display);
+    font-family: var(--font-family-display) ;
     font-size: 45px;
     text-shadow: var(--neon-effect);
     text-transform: uppercase;
