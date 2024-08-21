@@ -73,13 +73,13 @@
 }
 
 @media (max-width:768px) {
-    [type='checkbox'] + label {
+    .toggle-btn [type='checkbox'] + label {
         width: 4rem;
-        height: 2rem;
+        height: 2.2rem;
         --s: -.4;
     }
-    [type='checkbox'] + label:before ,
-    [type='checkbox'] + label:after {
+    .toggle-btn [type='checkbox'] + label:before ,
+    .toggle-btn [type='checkbox'] + label:after {
         width: 1.5rem;
         height: 1.5rem;
 }

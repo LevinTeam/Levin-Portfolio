@@ -52,7 +52,6 @@ const ToggleSwitch = () => {
     
   }
 
-
   return (
 <div className='toggle-btn' >
 <input type='checkbox' id='c3d'
