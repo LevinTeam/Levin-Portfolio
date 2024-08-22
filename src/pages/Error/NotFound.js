@@ -24,16 +24,13 @@ export default function NotFound() {
         صفحه مورد نظر یافت نشد !
     </p>
     
-    <Link 
-    to={'/'}
-    replace= 'true'
-    >
       <Btn 
         text={'بازگشت به خانه'}
         textColor={'var(--bg-btn-color)'}
         backgroundColor={'var(--primary)'}
+        to={'/'}
         />
-    </Link>
+
     </div>
     </>
   )

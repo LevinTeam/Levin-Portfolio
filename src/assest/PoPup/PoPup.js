@@ -8,13 +8,15 @@ const PoPup = ({ show, onClose , data }) => {
 <>     
       <div className='over-layer'>
         <div className='modal-container'>
-          <div className='modal-header'>
-            <button className='close-btn' onClick={onClose}> ✖ </button>
-            <h2 className='modal-title'>{data.title}</h2>
-          </div>
-          <div className='modal-content'>
-            <p> {data.paragraph} </p>
-          </div>
+        <span className='close-icon' onClick={onClose}>
+        <i class='bx bx-x'></i>
+        </span>
+
+        <div className='modal-content'>
+          <h2>{data.title}</h2>
+          <p>{data.paragraph}</p>
+        </div>
+
         </div>  
       </div>
 </>
