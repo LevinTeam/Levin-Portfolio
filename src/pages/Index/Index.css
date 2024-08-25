@@ -46,12 +46,12 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow:inset 2px -1px 10px var(--light) ; 
+    padding: 10px;
 }
 
 .about-company section {
     width: 100%;
     display: flex;
-    margin-top: 3rem;
     justify-content: center;
     align-items: center;
 }
@@ -79,19 +79,6 @@
     color: var(--text);
 }
 
-.icon-container {
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    color: var(--text);
-}
-
-.img-company {
-    width: 89px;
-    height: 89px;
-}
 /* Desktop Card List Stylsheet */
 
 .card-list {
@@ -377,22 +364,102 @@
     padding-right: 5px;
 }
 
-/* Tilt Card */
+/* Noname card */
 
-.tiltcard {
+.noName-container {
     width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-wrap: wrap;
-    margin-top: 4.5rem;
-	gap: 28px;
-	padding: 20px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Vazirmatn';
+    margin-top: 4rem;
+}
+
+.noName-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text);
+}
+
+.noName-top section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.6rem;
+}
+
+.noName-top section h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.noName-top section p {
+    max-width: 40%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.noName-bottom {
+    width: 70%;
+    height: max-content;
+}
+
+.noName-bottom section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noName-cart {
+    width: 33.33%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.8rem;
+}
+
+.noName-cart h3 {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.noName-cart h4 {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.noName-cart p {
+    width: 60%;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text);
 }
 
 
+/* Call To Action */
 
+.startDevelop {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Vazirmatn';
+    color: var(--text);
+}
 
+.startDevelop h2 {
+    width: 35%;
+    font-size: 32px;
+    font-weight: 700;
+}
 
 
 
@@ -486,5 +553,5 @@
         margin-top: 0;
     }
 
-
+    /*  */
 }

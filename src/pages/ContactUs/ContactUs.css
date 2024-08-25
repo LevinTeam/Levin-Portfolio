@@ -8,19 +8,18 @@
     margin-top: 4rem;
 }
 
-.coment-form {
+.comment-form {
     display: flex;
     justify-content: center;
     width: 48%;
 }
 
 .counseling  {
-    width: 48%;
+    width: calc(48% - 40px);
     text-align: center;
 }
 
 .counseling section {
-    margin-top: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,35 +44,50 @@
     text-align: center;
 }
 
+.counseling section {
+    transition: .3s ease;
+}
+
+.counseling section:hover {
+    filter: blur(5px);
+    cursor: not-allowed;
+}
+
 .contactUs-links {
     display: flex;
     width: 100%;
     height: 10rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    /* background-color: red; */
+    margin-bottom: 3rem;
 }
 
-.contactUs-links figure {
-    margin-top: 1.2rem;
-}
-
-.link-contactUs {
-    width: 50%;
-    border-radius: 5px;
-    margin: 1rem;
-    background-color: var(--bg-btn-color);
+.contactus-box {
+    width: calc(50% - 20px);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
     box-shadow: inset 0px 4px 12px var(--light);
+    backdrop-filter: blur(10px);
 }
 
-.link-contactUs p {
-    color: var(--text);
-    font-weight: 500;
-    font-family: Vazirmatn;
-    text-align: center;
-    margin-top: 3rem;
+.contactus-box i {
+    width: 100%;
+    font-size: 2rem;
+    color: var(--dark);
 }
+
+.contactus-box a {
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    margin-top: -15%;
+}
+
 
 /* Comment Form */
 
@@ -180,6 +194,9 @@ input::-webkit-inner-spin-button {
     }
     .contactUs-container {
         flex-direction: column-reverse;
+    }
+    .comment-form {
+        width: 100%;
     }
 
 }

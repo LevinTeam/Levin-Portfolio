@@ -1,0 +1,20 @@
+.blog-page-container {
+    width: 100%;
+    min-height: 80vh;
+    color: var(--text);
+    font-family: Vazirmatn;
+}
+
+.blog-page-container img {
+    width: 100%;
+    height: 250px;
+}
+
+.blog-page-container p {
+    margin-top: 5%;
+    width: 70%;
+    font-weight: 500;
+    line-height: 190%;
+    background-color: var(--bg-btn-color);
+    transition: .3 ease;
+}

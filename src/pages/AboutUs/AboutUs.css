@@ -1,0 +1,60 @@
+.aboutus-container {
+    font-family: Vazirmatn;
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.aboutus-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aboutus-text {
+    width: 60%;
+    height: max-content;
+    padding: 20px;
+    border: 2px dashed var(--light);
+    border-radius: 15px;
+}
+
+.aboutus-text h2 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.aboutus-text p {
+    /* margin-top: -1%; */
+}
+
+.aboutus-baner {
+    width: 30%;
+}
+
+/* Tilt Card */
+
+.tiltcard {
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+    margin-top: 4.5rem;
+	gap: 28px;
+	padding: 20px;
+}
+
+@media (max-width: 955px) {
+    .aboutus-text {
+        width: 100%;
+    }
+    .aboutus-baner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

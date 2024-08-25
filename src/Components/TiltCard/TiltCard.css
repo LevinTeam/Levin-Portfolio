@@ -6,7 +6,8 @@
 	flex-direction: column;
 	z-index: 1;
 	width: calc(35% - 56px);
-	height: 28rem;
+	height: 100%;
+	max-height: 28rem;
 	padding: 40px 30px;
 	margin: 0;
 	box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
@@ -17,6 +18,7 @@
 	backdrop-filter: blur(5px);
 	overflow: hidden;
 	position: relative; /* لازم برای before */
+	font-size: clamp(1rem , 0.3043 + 3.4783vw , 3rem);
 }
 
 .glassmorphic-card:before {
@@ -30,6 +32,7 @@
 	background: rgba(255,255,255,0.05);
 	pointer-events: none;
 	box-sizing: border-box;
+
 }
 
 .glassmorphic-card .imgBox {
@@ -109,8 +112,14 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 995px) {
     .glassmorphic-card {
-        width: calc(100% - 40px);
+        width: calc(70% - 40px);
     }
+}
+
+@media (max-width: 768px) {
+	.glassmorphic-card {
+		width: calc(100% - 40px);
+	}
 }

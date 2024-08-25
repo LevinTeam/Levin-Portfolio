@@ -14,6 +14,7 @@ const TiltCard = ({ job , profile , about , portfolio , name }) => {
           speed: 200,
           glare: true,
           'max-glare': .5,
+          gyroscope: false
         });
       }
   

@@ -61,7 +61,6 @@ export default function Index() {
             { id: 7, title: 'امنیت', paragraph: 'با شناسایی و رفع آسیب‌پذیری‌ها، امنیت وبسایت و اپلیکیشن‌های شما را به حداکثر می‌رسانیم. ما از جدیدترین روش‌ها و ابزارهای امنیتی برای محافظت از سیستم شما استفاده می‌کنیم.' },
             { id: 8, title: 'ریدیزاین', paragraph: 'ما وبسایت شما را با رویکردی مدرن و خلاقانه بازطراحی می‌کنیم تا همگام با ترندهای جدید و نیازهای کاربران باشد. این بازطراحی تجربه کاربری را ارتقا می‌دهد و نرخ تبدیل را افزایش می‌دهد.' },
         ];
-        
     
           const found = services.find(modalData => modalData.id === modalTarget);
           setFoundData(found);
@@ -72,14 +71,17 @@ export default function Index() {
         }
       };
 
-    // CEO Card Info
+    // noName Carts =>
 
-    const CEO = [
-      {id: 1 , name:'Shervin Fatahi' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'FRONT' , about: 'من یک توسعه‌دهنده فرانت‌اند با تجربه در React، Vanilla JavaScript، Bootstrap و Sass هستم. همچنین به عنوان یک طراح وبسایت با Figma فعالیت می‌کنم.' , portfolio: '#' },
-      {id: 2 , name:'Pouya Alijany' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'SEO' , about: 'من یک متخصص SEO و توسعه‌دهنده فرانت‌اند هستم. مهارت اصلی من در کار با React و Vanilla JavaScript است، اما اولویت اصلی من بهینه‌سازی سایت‌ها برای موتورهای جستجو (SEO).' , portfolio: '#' },
-      {id: 3 , name:'Arman Mohebrad' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'BACK' , about: 'من یک توسعه‌دهنده بک‌اند هستم که با Django و Node.js کار می‌کنم. همچنین تخصص ویژه‌ای در امنیت سایت‌ها دارم. (سرباز وطن | آبدارچی شرکت)' , portfolio: '#' },
-    ]
-
+      const noName = [
+        {id: 1,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur'},
+        {id: 2,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur',},
+        {id: 3,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur',},
+        {id: 4,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur'},
+        {id: 5, title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur'},
+        {id: 6, title: 'Lorem ipsum dolor', content: 'Lorem ipsum dolor sit amet consectetur'},
+      ]
+  
 
   return (
     <>
@@ -209,23 +211,51 @@ export default function Index() {
 
     </div>
 
+{/* Call To Action */}
 
-{/* CEO card */} 
+<section className='startDevelop'>
+      <Btn 
+      text="مشورت با نینجا ها" 
+      backgroundColor="var(--primary)" 
+      textColor="var(--bg-btn-color)"
+      />
+      <h2>با نینجاهای ماهر لوین همکاری کنید و تیم خود را تقویت کنید!</h2>
+    </section>
 
+{/* Noname Card */}
 
+  <div className='noName-container'>
+      <div className='noName-top'>
+        <svg width="636" height="111" viewBox="0 0 636 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M243 10.5562L197.993 55.5635L243 100.571" stroke="#8C4CF5" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
+<g clipPath="url(#clip0_1138_1398)">
+<path d="M288.541 17.0104C291.487 15.9592 294.683 15.8265 297.706 16.6297C300.729 17.433 303.437 19.1345 305.473 21.5095C307.509 23.8845 308.776 26.8211 309.107 29.9315C309.439 33.0419 308.819 36.1797 307.329 38.9304L354.627 86.2329L348.382 92.478L301.08 45.1755C298.329 46.6591 295.192 47.2743 292.085 46.94C288.977 46.6057 286.043 45.3376 283.67 43.3029C281.297 41.2682 279.597 38.5623 278.792 35.5418C277.988 32.5213 278.118 29.3279 279.164 26.3826L289.044 36.2627C289.656 36.8954 290.387 37.4002 291.195 37.7474C292.003 38.0946 292.872 38.2773 293.752 38.285C294.632 38.2926 295.504 38.125 296.318 37.7919C297.133 37.4588 297.872 36.9668 298.494 36.3448C299.116 35.7228 299.608 34.9831 299.941 34.1689C300.274 33.3547 300.442 32.4823 300.434 31.6027C300.427 30.723 300.244 29.8537 299.897 29.0454C299.55 28.2371 299.045 27.5061 298.412 26.8949L288.536 17.006L288.541 17.0104ZM334.328 25.3314L348.382 17.5228L354.627 23.7679L346.819 37.8218L339.01 39.3853L329.647 48.753L323.397 42.5079L332.765 33.1401L334.328 25.3314ZM304.657 61.2478L310.902 67.4929L287.481 90.9145C286.685 91.7131 285.613 92.1768 284.486 92.2106C283.358 92.2443 282.261 91.8456 281.418 91.0961C280.575 90.3466 280.051 89.3031 279.953 88.1796C279.855 87.0561 280.191 85.9377 280.891 85.0536L281.236 84.6694L304.657 61.2478Z" fill="var(--text)"/>
+</g>
+<path d="M393 10.5562L438.007 55.5635L393 100.571" stroke="#8C4CF5" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
+<defs>
+<clipPath id="clip0_1138_1398">
+<rect width="106" height="106" fill="white" transform="translate(265 2.56348)"/>
+</clipPath>
+</defs>
+        </svg>
+        <section>
+          <h2>فرآیند ما  صداقت ما</h2>
+          <p>ما کارهایی رو در ۳ تا ۶ ماه انجام می‌دیم که تیم‌های دیگه در ۱ تا ۲ سال انجام می‌دن. ما محصولات کوچک و سبک نمی‌سازیم فقط به خاطر اینکه الان مد شده؛ بلکه این کار رو به خاطر هوشمندی و توجه به مشتری‌هامون انجام می‌دیم.</p>
+        </section>
+      </div>
+      <div className='noName-bottom'>
+        <section>
+          {noName.map(name => (
+            <div key={name.id} className='noName-cart'>
+              <h3>{name.id}</h3>
+              <h4>{name.title}</h4>
+              <p>{name.content}</p>
+            </div>
+          ))}
+        </section>
+      </div>
+  </div>
 
-  { <div className='tiltcard'>
-              {CEO.map( (info) => (
-                <TiltCard 
-                key={info.id}
-                job={info.job}
-                name={info.name}
-                profile={info.profile}
-                about={info.about}
-                portfolio={info.portfolio}
-                />
-              ))}
-  </div>}
 
     </>
   )

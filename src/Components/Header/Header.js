@@ -18,7 +18,6 @@ const useScreenWidth = (width) => {
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = useScreenWidth(955);
 
   const links = [
     { id: 1, url: '/', topText: 'خانه', bottomText: 'خانه' },
@@ -52,7 +51,7 @@ const Header = () => {
           />
         </div>
         <div className='header-links'>
-          <ul className={`header-items ${menuOpen && isMobile ? 'mobile-menu-items' : ''}`}>
+          <ul className={`header-items ${menuOpen ? 'mobile-menu-items' : ''}`}>
             {links.map((link) => (
               <li key={link.id} className='header__li-link'>
                 <Ninjalink
@@ -87,7 +86,7 @@ const Header = () => {
           <div className={`menu-icon-line ${menuOpen ? 'open' : ''}`}></div>
           <div className={`menu-icon-line ${menuOpen ? 'open' : ''}`}></div>
         </div>
-        {isMobile && menuOpen && (
+        {menuOpen && (
           <div className='mobile-menu'>
             <ul className='mobile-menu-items'>
               <li className='mobile-menu-item'>

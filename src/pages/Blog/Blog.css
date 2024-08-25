@@ -1,4 +1,81 @@
 .blog-container {
     width: 100%;
-    height: 100vh;
+    display: flex;
+    justify-content:  center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* THE CARD */
+.blog-card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: var(--bg-btn-color);
+    color: var(--text);
+    box-shadow: 0 0 10px 0 var(--light);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: .5rem;
+    font-family: Vazirmatn;
+    transition: .3s ease;
+    text-decoration: none;
+}
+
+.blog-card:hover {
+    transform: skew(2deg);
+}
+
+.card-img {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.card-img img {
+    position: absolute;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    line-height: 1.33;
+    font-weight: 700;
+}
+
+.card-title.skeleton {
+    min-height: 28px;
+    border-radius: 4px;
+}
+
+.card-intro {
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+.card-intro.skeleton {
+    min-height: 72px;
+    border-radius: 4px;
+}
+
+/* THE LOADING EFFECT */
+.skeleton {
+    background-color: #a2a9af;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1s ease infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: right -40px top 0;
+    }
 }

@@ -18,6 +18,10 @@ export default function Login() {
     setIsActive(false)
   }
 
+  {
+    isActive ? document.documentElement.style.setProperty( '--p' , 'absolute' ) : document.documentElement.style.setProperty( '--p' , '' )
+  }
+
   return (
     <section className='form-container'>
       <div className={isActive ? 'wrapper active' : 'wrapper'}>
