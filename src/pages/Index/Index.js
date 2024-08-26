@@ -71,15 +71,15 @@ export default function Index() {
         }
       };
 
-    // noName Carts =>
+    // Roadmap Carts =>
 
-      const noName = [
-        {id: 1,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur'},
-        {id: 2,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur',},
-        {id: 3,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur',},
-        {id: 4,title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur'},
-        {id: 5, title: 'Lorem ipsum dolor',content: 'Lorem ipsum dolor sit amet consectetur'},
-        {id: 6, title: 'Lorem ipsum dolor', content: 'Lorem ipsum dolor sit amet consectetur'},
+      const roadmap = [
+        {id: 1 ,title: 'طراحی پرتوتایپ', content: 'نینجاهای ما با هنرهای خود ، پروتوتایپ اولیه را طراحی می‌کنند تا مسیر پروژه مشخص شود. این سلاح نینجاهاست.'},
+        {id: 2 ,title: ' بازبینی و تایید ', content: 'پروتوتایپ را به کارفرما ارائه داده و با دقت، نظرات نهایی را برای ادامه مسیر دریافت می‌کنیم.',},
+        {id: 3 ,title: 'تلفیق و توسعه', content: 'نینجاهای ما با استفاده از تکنیک‌های پیشرفته، نیروهای فرانت‌اند، بک‌اند و هر ابزار لازم را به‌کار می‌گیرند.',},
+        {id: 4 ,title: ' توسعه و یکپارچگی' ,content: 'با استفاده از هنرهای مخفی، بخش‌های بک‌اند و سرور را به هم پیوند می‌دهیم تا سایت با نهایت سرعت و امنیت راه‌اندازی شود.'},
+        {id: 5 , title: 'تست نهایی' ,content: 'قبل از تحویل نهایی، نینجاها سایت را تست کرده و هر نقصی را از بین می‌برند تا عملکردی بی‌نقص داشته باشد.'},
+        {id: 6 , title: 'راه‌اندازی و پشتیبانی' , content: 'پس از تحویل سایت، نینجاها همواره در کمین‌اند تا هر مشکلی را سریعاً برطرف کنند و امنیت سایت را تضمین کنند.'},
       ]
   
 
@@ -158,21 +158,21 @@ export default function Index() {
 	  <div className='mask'></div>
 	  </div>
 
-        <div className='regular-card-animation'>
+      <div className='regular-card-animation'>
           <ul>
 {/* Mobile */}
       {cardData.map((data) => (
-        <li key={data.id}>
+        <li onClick={toggleModal} key={data.id}  value={data.id}>
           <div className='regular-card'>
-              <a href={data.src}><span className='model-name'>
+              <div href={data.src}><span className='model-name'>
                 {data.name}  </span>
               <span> {data.description} </span>
-            </a>
+            </div>
           </div>
         </li>
         ))}
           </ul>
-        </div>
+      </div>
 
 	  <div className='center-circle'>
         {/* SVG ninja file for Cart List => */}
@@ -214,18 +214,18 @@ export default function Index() {
 {/* Call To Action */}
 
 <section className='startDevelop'>
+  <h2>با نینجاهای ماهر لوین همکاری کنید و تیم خود را تقویت کنید!</h2>
       <Btn 
       text="مشورت با نینجا ها" 
       backgroundColor="var(--primary)" 
       textColor="var(--bg-btn-color)"
       />
-      <h2>با نینجاهای ماهر لوین همکاری کنید و تیم خود را تقویت کنید!</h2>
     </section>
 
-{/* Noname Card */}
+{/* Roadmap Card */}
 
-  <div className='noName-container'>
-      <div className='noName-top'>
+  <div className='roadmap-container'>
+      <div className='roadmap-top'>
         <svg width="636" height="111" viewBox="0 0 636 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M243 10.5562L197.993 55.5635L243 100.571" stroke="#8C4CF5" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
 <g clipPath="url(#clip0_1138_1398)">
@@ -239,14 +239,14 @@ export default function Index() {
 </defs>
         </svg>
         <section>
-          <h2>فرآیند ما  صداقت ما</h2>
-          <p>ما کارهایی رو در ۳ تا ۶ ماه انجام می‌دیم که تیم‌های دیگه در ۱ تا ۲ سال انجام می‌دن. ما محصولات کوچک و سبک نمی‌سازیم فقط به خاطر اینکه الان مد شده؛ بلکه این کار رو به خاطر هوشمندی و توجه به مشتری‌هامون انجام می‌دیم.</p>
+          <h2> مسیر پیشرفت </h2>
+          {/* <p>ما کارهایی رو در ۳ تا ۶ ماه انجام می‌دیم که تیم‌های دیگه در ۱ تا ۲ سال انجام می‌دن. ما محصولات کوچک و سبک نمی‌سازیم فقط به خاطر اینکه الان مد شده؛ بلکه این کار رو به خاطر هوشمندی و توجه به مشتری‌هامون انجام می‌دیم.</p> */}
         </section>
       </div>
-      <div className='noName-bottom'>
+      <div className='roadmap-bottom'>
         <section>
-          {noName.map(name => (
-            <div key={name.id} className='noName-cart'>
+          {roadmap.map(name => (
+            <div key={name.id} className='roadmap-cart'>
               <h3>{name.id}</h3>
               <h4>{name.title}</h4>
               <p>{name.content}</p>

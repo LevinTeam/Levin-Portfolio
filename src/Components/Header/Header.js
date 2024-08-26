@@ -19,6 +19,13 @@ const Header = () => {
   const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  
+const closeMenu = () => {
+    setMenuOpen(false)
+    console.log(48947984894);
+    
+}
+
   const links = [
     { id: 1, url: '/', topText: 'خانه', bottomText: 'خانه' },
     { id: 2, url: '/Blog', topText: 'وبلاگ', bottomText: 'وبلاگ' },
@@ -89,15 +96,17 @@ const Header = () => {
         {menuOpen && (
           <div className='mobile-menu'>
             <ul className='mobile-menu-items'>
-              <li className='mobile-menu-item'>
+              <li className='mobile-menu-item' onClick={closeMenu}>
                 <Btn               
                   text={'ثبت نام | ورود'} 
                   backgroundColor={'var(--primary)'} 
                   textColor={'var(--bg-btn-color)'}
+                  to={'/login'}
+                  onClick={closeMenu}
                   />
               </li>
               {links.map((link) => (
-                <li key={link.id} className='mobile-menu-item'>
+                <li key={link.id} className='mobile-menu-item' onClick={closeMenu}>
                   <Ninjalink
                     url={link.url}
                     topText={link.topText}

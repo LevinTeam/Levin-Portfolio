@@ -364,85 +364,6 @@
     padding-right: 5px;
 }
 
-/* Noname card */
-
-.noName-container {
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Vazirmatn';
-    margin-top: 4rem;
-}
-
-.noName-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--text);
-}
-
-.noName-top section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 1.6rem;
-}
-
-.noName-top section h2 {
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.noName-top section p {
-    max-width: 40%;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.noName-bottom {
-    width: 70%;
-    height: max-content;
-}
-
-.noName-bottom section {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.noName-cart {
-    width: 33.33%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.8rem;
-}
-
-.noName-cart h3 {
-    font-size: 60px;
-    font-weight: bold;
-    color: var(--dark);
-}
-
-.noName-cart h4 {
-    font-size: 20px;
-    color: var(--text);
-}
-
-.noName-cart p {
-    width: 60%;
-    font-size: 16px;
-    text-align: center;
-    color: var(--text);
-}
-
-
 /* Call To Action */
 
 .startDevelop {
@@ -451,8 +372,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     font-family: 'Vazirmatn';
     color: var(--text);
+    box-shadow: 0 0 25px var(--light);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
 }
 
 .startDevelop h2 {
@@ -460,6 +386,95 @@
     font-size: 32px;
     font-weight: 700;
 }
+
+/* Roadmap card */
+
+.roadmap-container {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Vazirmatn';
+    margin-top: 15%;
+    /* border: 3px dotted var(--dark);
+    border-radius: 25px; */
+}   
+
+.roadmap-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text);
+}
+
+.roadmap-top section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.6rem;
+}
+
+.roadmap-top section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* .roadmap-top section p {
+    max-width: 40%;
+    text-align: center;
+    margin-top: 1rem;
+} */
+
+.roadmap-bottom {
+    width: 70%;
+    height: max-content;
+}
+
+.roadmap-bottom section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.roadmap-cart {
+    width: calc(33% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: inset 0 0 25px var(--light);
+    margin: 10px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+}
+
+.roadmap-cart h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.roadmap-cart h4 {
+    font-size: 24px;
+    color: var(--light);
+    margin-top: -5%;
+}
+
+.roadmap-cart p {
+    width: 90%;
+    font-size: 14px;
+    text-align: center;
+    color: var(--text);
+    margin-top: 1%;
+}
+
+
+
 
 
 
@@ -523,6 +538,11 @@
         width: 100%;
     }
 
+    /* Roadmap Card */
+    .roadmap-cart {
+        width: calc(48% - 40px);
+    }
+
 
 }
 @media (max-width: 768px) {
@@ -552,6 +572,17 @@
     .sm-textbox {
         margin-top: 0;
     }
-
-    /*  */
+    /* Roadmap Card */
+    .roadmap-cart {
+        width: 100%;
+    }
+    /* Start Develop */
+    .startDevelop {
+        justify-content: center;
+        text-align: center;
+    }
+    .startDevelop h2 {
+        width: 100%;
+        margin-bottom: 7%;
+    }
 }
