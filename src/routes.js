@@ -5,6 +5,7 @@ import Login from './pages/Login/Login'
 import Blog from './pages/Blog/Blog'
 import SinglePageBlog from './pages/Blog/SinglePageBlog/SinglePageBlog'
 import AboutUs from './pages/AboutUs/AboutUs'
+import UserInfo from './pages/UserInfo/UserInfo'
 
 const routes = [
     {path: '/' , element : <Index />} , 
@@ -13,6 +14,7 @@ const routes = [
     {path: '/Blog' , element : <Blog />} , 
     {path: '/Blog/:SinglePageBlogID' , element : <SinglePageBlog />} , 
     {path: '/AboutUs' , element : <AboutUs />} , 
+    {path: '/UserInfo' , element : <UserInfo />} , 
     {path: '*' , element : <NotFound />}
 ]
 

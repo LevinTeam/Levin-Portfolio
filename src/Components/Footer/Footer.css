@@ -70,6 +70,12 @@
 
 .icons-footer ul li {
     margin-inline: .5rem;
+    font-size: 1.6rem;
+}
+
+.icons-footer ul li a {
+    text-decoration: none;
+    color: var(--dark);
 }
 
 /* Media queries for responsiveness */

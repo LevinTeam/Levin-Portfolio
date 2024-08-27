@@ -216,9 +216,10 @@ export default function Index() {
 <section className='startDevelop'>
   <h2>با نینجاهای ماهر لوین همکاری کنید و تیم خود را تقویت کنید!</h2>
       <Btn 
-      text="مشورت با نینجا ها" 
-      backgroundColor="var(--primary)" 
-      textColor="var(--bg-btn-color)"
+      text={'شروع ماجراجویی'} 
+      backgroundColor={'var(--primary)'}  
+      textColor={'var(--bg-btn-color)'}
+      to={'/AboutUs'} 
       />
     </section>
 
