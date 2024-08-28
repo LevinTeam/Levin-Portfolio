@@ -17,12 +17,12 @@ export default function Footer() {
         },
         {
             id: 3,
-            url: '/',
+            url: '/AboutUs',
             title: 'درباره ما',
         },
         {
             id: 4,
-            url: '/',
+            url: '/ContactUs',
             title: 'تماس با ما',
         },
     ]

@@ -97,6 +97,7 @@ export default function Index() {
             text="استخدام نینجا" 
             backgroundColor="var(--primary)" 
             textColor="var(--bg-btn-color)"
+            to={'/ContactUs'}
             />
         </div>
         </div>        
