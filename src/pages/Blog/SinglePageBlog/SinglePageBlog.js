@@ -8,16 +8,22 @@ import ArticlesData from '../ArticlesData/ArticlesData'
     let params = useParams()
     
     const blogData = ArticlesData.find(data => data.id == params.SinglePageBlogID)
-    console.log(blogData);
-
-
-  return (
-    <div className='blog-page-container'>
+    console.log(blogData.imgHeader);
+    
+    return (
+      <div className='blog-page-container'>
         <h2>{blogData.title}</h2>
-        <img src='https://assets.codepen.io/285131/uslmOwQpdRRUwr6AmBP6JdzeHjS.jpg' alt="" />
+        <img src={blogData.imgHeader} alt="" />
         <hr />
         <div className='paragraph-container'>
-          <p>{blogData.content}</p>
+          {
+          blogData.content.map((paragraph , index) => (
+            <div key={index} className='paragraph-div'>
+              <h5> {paragraph.heading} </h5>
+            <p> {paragraph.paragraph} </p>
+            </div>
+          ))
+          }
         </div>
 
     </div>

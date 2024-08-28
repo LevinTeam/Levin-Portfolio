@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Login.css'
-import { Link } from 'react-router-dom'
 
 export default function Login() {
 
@@ -10,6 +9,8 @@ export default function Login() {
   const [registerPhoneNumber, setRegisterPhoneNumber] = useState('')
   const [registerPassword, setRegisterPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
+  const [registerUserFirstName, setRegisterUserFirstName] = useState('')
+  const [registerUserLastName, setRegisterUserLastName] = useState('')
 
   const active = () => {
     setIsActive(true)
@@ -61,8 +62,28 @@ export default function Login() {
         </div>
 
         <div className='form-box register'>
-          <h2 className='animation' style={{ '--i': 17 , '--j': 0}}> ثبت نام </h2>
-          <form action="#">
+          <h2 className='animation' style={{ '--i': 15 , '--j': 0}}> ثبت نام </h2>
+          <form>
+          <div className='input-box animation' style={{ '--i': 16 , '--j': 1}}>
+              <input 
+                type="text" 
+                value={registerUserFirstName} 
+                onChange={(e) => setRegisterUserFirstName(e.target.value)} 
+                required
+              />
+              <label>نام</label>
+              <i className='bx bx-user-pin' ></i>
+            </div>
+          <div className='input-box animation' style={{ '--i': 17 , '--j': 1}}>
+              <input 
+                type="text" 
+                value={registerUserLastName} 
+                onChange={(e) => setRegisterUserLastName(e.target.value)} 
+                required
+              />
+              <label>نام خانوادگی</label>
+              <i className='bx bxs-user-pin' ></i>
+            </div>
             <div className='input-box animation' style={{ '--i': 18 , '--j': 1}}>
               <input 
                 type="number" 

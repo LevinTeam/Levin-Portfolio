@@ -28,11 +28,11 @@ export default function Footer() {
     ]
     
     const icons = [
-        { id: 1, i: <i class='bx bxl-instagram'></i> , title: 'صفحه اینستاگرام', href: '', alt: 'لوگو ایستاگرام' },
-        { id: 2, i: <i class='bx bxl-github'></i> , title: 'صفحه گیت هاب', href: '', alt: 'لوگو گیت هاب' },
-        { id: 3, i: <i class='bx bxl-telegram' ></i> , title: 'صفحه تلگرام', href: '', alt: 'لوگو تلگرام' },
-        { id: 4, i: <i class='bx bxl-linkedin' ></i> , title: 'صفحه لینکدین', href: '', alt: 'لوگو لینکدین' },
-        { id: 5, i: <i class='bx bx-phone' ></i> , title: 'تماس با ما', href: '', alt: 'لوگو تماس' },
+        { id: 1, i: <i className='bx bxl-instagram'></i> , title: 'صفحه اینستاگرام', href: '', alt: 'لوگو ایستاگرام' },
+        { id: 2, i: <i className='bx bxl-github'></i> , title: 'صفحه گیت هاب', href: '', alt: 'لوگو گیت هاب' },
+        { id: 3, i: <i className='bx bxl-telegram' ></i> , title: 'صفحه تلگرام', href: '', alt: 'لوگو تلگرام' },
+        { id: 4, i: <i className='bx bxl-linkedin' ></i> , title: 'صفحه لینکدین', href: '', alt: 'لوگو لینکدین' },
+        { id: 5, i: <i className='bx bx-phone' ></i> , title: 'تماس با ما', href: '', alt: 'لوگو تماس' },
     ]
 
     return (

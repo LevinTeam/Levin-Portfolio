@@ -3,18 +3,6 @@ import './Header.css';
 import Btn from '../../assest/Btn/Btn';
 import Ninjalink from '../../assest/Ninja-Link/Ninjalink';
 
-const useScreenWidth = (width) => {
-  const [isScreenWidth, setIsScreenWidth] = useState(window.innerWidth <= width);
-
-  useEffect(() => {
-    const handleResize = () => setIsScreenWidth(window.innerWidth <= width);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [width]);
-
-  return isScreenWidth;
-};
-
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,14 +10,12 @@ const Header = () => {
   
 const closeMenu = () => {
     setMenuOpen(false)
-    console.log(48947984894);
-    
 }
 
   const links = [
     { id: 1, url: '/', topText: 'خانه', bottomText: 'خانه' },
     { id: 2, url: '/Blog', topText: 'وبلاگ', bottomText: 'وبلاگ' },
-    { id: 4, url: '/Chat', topText: 'مشاوره', bottomText: 'مشاوره' },
+    // { id: 4, url: '/Chat', topText: 'مشاوره', bottomText: 'مشاوره' },
     { id: 3, url: '/AboutUs', topText: 'درباره ما', bottomText: 'درباره ما' },
     { id: 4, url: '/ContactUs', topText: 'تماس با ما', bottomText: 'تماس با ما' },
   ];

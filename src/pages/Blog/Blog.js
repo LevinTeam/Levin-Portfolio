@@ -38,14 +38,14 @@ const Blog =() => {
       articles.map( (info) => (
           <Link to={`/Blog/${info.id}`} class="blog-card" key={info.id} >
           <div class="card-img">
-            <img src="https://assets.codepen.io/285131/uslmOwQpdRRUwr6AmBP6JdzeHjS.jpg" />
+            <img src={info.imgCover} />
           </div>
           <div class="card-body">
             <h2 class="card-title">
               {info.title}
             </h2>
             <p class="card-intro">
-              {info.paragraph}
+              {info.preview}
             </p>
           </div>
         </Link>

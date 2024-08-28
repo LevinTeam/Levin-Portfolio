@@ -3,30 +3,19 @@ import { useState }  from 'react'
 import './Index.css'
 import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
-import TiltCard from '../../Components/TiltCard/TiltCard'
 import PoPup from '../../assest/PoPup/PoPup'
-import { Link } from 'react-router-dom'
 
 export default function Index() {
-
-  // About Company Icon List =>
-
-  const iconList = [
-    {id:1 , src: "Images/company-icon/Project.svg", title: "Projects", count: "+10" },
-    {id:2 , src: "Images/company-icon/Clients.svg", title: "Clients", count: "+10" },
-    {id:3 , src: "Images/company-icon/Experience.svg", title: "Experience", count: "+1 years" },
-    {id:4 , src: "Images/company-icon/Company.svg", title: "Company", count: "+1" },
-  ];
 
   // Smart Management Text Box =>
 
     const smTextBox = [
-      {id:1 , src: "Images/Logo/Checkbox-Done.svg" , text: "افزایش فروش و بهره‌وری"} ,
-      {id:2 , src: "Images/Logo/Checkbox-Done.svg" , text: "سیستم نوبت‌دهی آنلاین یکپارچه"} ,
-      {id:3 , src: "Images/Logo/Checkbox-Done.svg" , text: "ایجاد گالری اختصاصی برای نمایش محصولات"} ,
-      {id:4 , src: "Images/Logo/Checkbox-Done.svg" , text: "پرداخت‌های امن و مطمئن"} ,
-      {id:5 , src: "Images/Logo/Checkbox-Done.svg" , text: "مدیریت ساده و کاربرپسند"} ,
-      {id:6 , src: "Images/Logo/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
+      {id:1 , src: "Images/Icon/Checkbox-Done.svg" , text: "افزایش فروش و بهره‌وری"} ,
+      {id:2 , src: "Images/Icon/Checkbox-Done.svg" , text: "سیستم نوبت‌دهی آنلاین یکپارچه"} ,
+      {id:3 , src: "Images/Icon/Checkbox-Done.svg" , text: "ایجاد گالری اختصاصی برای نمایش محصولات"} ,
+      {id:4 , src: "Images/Icon/Checkbox-Done.svg" , text: "پرداخت‌های امن و مطمئن"} ,
+      {id:5 , src: "Images/Icon/Checkbox-Done.svg" , text: "مدیریت ساده و کاربرپسند"} ,
+      {id:6 , src: "Images/Icon/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
     ]
 
     // Card List =>
@@ -207,7 +196,7 @@ export default function Index() {
       </section>
       
       <figure className='sm-Baner'>
-        <img src="Images/Baners/sm-Baner.svg" alt="" />
+        <img src="Images/Baner/sm-Baner.svg" alt="" />
       </figure>
 
     </div>
@@ -257,7 +246,6 @@ export default function Index() {
         </section>
       </div>
   </div>
-
 
     </>
   )

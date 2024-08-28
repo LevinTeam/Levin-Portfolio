@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     transition: all .3 ease;
+    user-select: none;
 }
 
 .header {
