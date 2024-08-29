@@ -4,6 +4,7 @@ import './Index.css'
 import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
 import PoPup from '../../assest/PoPup/PoPup'
+import scrollTop from '../../utils';
 
 export default function Index() {
 
@@ -87,6 +88,7 @@ export default function Index() {
             backgroundColor="var(--primary)" 
             textColor="var(--bg-btn-color)"
             to={'/ContactUs'}
+            onClick={scrollTop}
             />
         </div>
         </div>        
@@ -210,6 +212,7 @@ export default function Index() {
       backgroundColor={'var(--primary)'}  
       textColor={'var(--bg-btn-color)'}
       to={'/AboutUs'} 
+      onClick={scrollTop}
       />
     </section>
 

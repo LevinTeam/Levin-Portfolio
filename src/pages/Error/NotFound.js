@@ -1,7 +1,7 @@
 import React from 'react'
 import './NotFound.css'
 import Btn from '../../assest/Btn/Btn'
-import {Link} from 'react-router-dom'
+import scrollTop from '../../utils';
 
 export default function NotFound() {
   
@@ -29,6 +29,7 @@ export default function NotFound() {
         textColor={'var(--bg-btn-color)'}
         backgroundColor={'var(--primary)'}
         to={'/'}
+        onClick={scrollTop}
         />
 
     </div>

@@ -49,11 +49,6 @@
     transition: .3s ease;
 }
 
-.counseling section:hover {
-    filter: blur(5px);
-    cursor: not-allowed;
-}
-
 .contactUs-links {
     display: flex;
     width: 100%;
@@ -83,10 +78,11 @@
 }
 
 .contactus-box a {
+    width: 100%;
     text-decoration: none;
     color: var(--text);
     display: block;
-    margin-top: -15%;
+    font-weight: 600;
 }
 
 
@@ -198,6 +194,9 @@ input::-webkit-inner-spin-button {
     }
     .comment-form {
         width: 100%;
+    }
+    .contactus-box a {
+        font-size: .8rem;
     }
 
 }

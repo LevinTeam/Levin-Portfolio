@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Header.css';
 import Btn from '../../assest/Btn/Btn';
 import Ninjalink from '../../assest/Ninja-Link/Ninjalink';
+import scrollTop from '../../utils';
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
@@ -10,6 +11,7 @@ const Header = () => {
   
 const closeMenu = () => {
     setMenuOpen(false)
+    scrollTop()
 }
 
   const links = [
@@ -41,6 +43,7 @@ const closeMenu = () => {
             backgroundColor={'var(--primary)'} 
             textColor={'var(--bg-btn-color)'} 
             to={'/login'}
+            onClick={scrollTop}
           />
         </div>
         <div className='header-links'>
@@ -82,7 +85,7 @@ const closeMenu = () => {
         {menuOpen && (
           <div className='mobile-menu'>
             <ul className='mobile-menu-items'>
-              <li className='mobile-menu-item' onClick={closeMenu}>
+              <li className='mobile-menu-item' >
                 <Btn               
                   text={'ثبت نام | ورود'} 
                   backgroundColor={'var(--primary)'} 

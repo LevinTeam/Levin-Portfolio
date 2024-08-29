@@ -2,7 +2,7 @@ import React from 'react'
 import './ContactUs.css'
 import Btn from './../../assest/Btn/Btn'
 import { useState } from 'react'
-// import FeedbackForm from './../../Components/CommentForm/CommentForm'
+import scrollTop from '../../utils';
 
 function ContactUs() {
 
@@ -23,6 +23,8 @@ function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log(formData);
 
     setFormData({
       name: '',
@@ -118,6 +120,7 @@ function ContactUs() {
       text={'ارسال'}
       textColor={'var(--bg-btn-color)'}
       backgroundColor={'var(--primary)'}
+      onClick={handleSubmit}
       />
     </form>
             </div>
@@ -133,13 +136,15 @@ function ContactUs() {
                 <Btn 
                 text='مشاوره' 
                 textColor="var(--bg-btn-color)"  
-                backgroundColor="var(--primary)" />
+                backgroundColor="var(--primary)" 
+                onClick={scrollTop}
+                />
             </section>
                 <div className="contactUs-links">
                     {aboutCompany.map(item => (
                       <div key={item.id} className='contactus-box'>
                         {item.icon} 
-                        <a href={item.url}> {item.text} </a>
+                        <a href={item.url}> <p>{item.text}</p> </a>
                       </div>
                         ))}
                 </div>
