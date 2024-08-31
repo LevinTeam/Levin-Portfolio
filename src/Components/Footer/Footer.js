@@ -7,12 +7,12 @@ export default function Footer() {
     const links = [
         {
             id: 1,
-            url: '/',
+            url: '/Privacy',
             title: 'حریم خصوصی و امنیت',
         },
         {
             id: 2,
-            url: '/',
+            url: '/FAQ',
             title: 'سوالات متداول',
         },
         {
@@ -28,11 +28,11 @@ export default function Footer() {
     ]
     
     const icons = [
-        { id: 1, i: <i className='bx bxl-instagram'></i> , title: 'صفحه اینستاگرام', href: '', alt: 'لوگو ایستاگرام' },
-        { id: 2, i: <i className='bx bxl-github'></i> , title: 'صفحه گیت هاب', href: '', alt: 'لوگو گیت هاب' },
-        { id: 3, i: <i className='bx bxl-telegram' ></i> , title: 'صفحه تلگرام', href: '', alt: 'لوگو تلگرام' },
-        { id: 4, i: <i className='bx bxl-linkedin' ></i> , title: 'صفحه لینکدین', href: '', alt: 'لوگو لینکدین' },
-        { id: 5, i: <i className='bx bx-phone' ></i> , title: 'تماس با ما', href: '', alt: 'لوگو تماس' },
+        { id: 1, i: <i className='bx bxl-instagram'></i> , title: 'صفحه اینستاگرام', href: 'https://www.instagram.com/levin_team', alt: 'لوگو ایستاگرام' },
+        { id: 2, i: <i className='bx bxl-github'></i> , title: 'صفحه گیت هاب', href: 'https://github.com/LevinTeam', alt: 'لوگو گیت هاب' },
+        { id: 3, i: <i className='bx bxl-telegram' ></i> , title: 'صفحه تلگرام', href: 'https://t.me/Levin_Team', alt: 'لوگو تلگرام' },
+        { id: 4, i: <i className='bx bxl-linkedin' ></i> , title: 'صفحه لینکدین', href: 'https://linkedin.com/company/levin-team', alt: 'لوگو لینکدین' },
+        { id: 5, i: <i className='bx bx-phone' ></i> , title: 'تماس با ما', href: 'tel:09030626978', alt: 'لوگو تماس' },
     ]
 
     return (

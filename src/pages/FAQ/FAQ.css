@@ -1,0 +1,98 @@
+.faq-container {
+    padding: 0.5rem;
+    font-family: Vazirmatn;
+    user-select: none;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.faq-main-title {
+    width: 30%;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-weight: 900;
+}
+.faq-main-title:before, .faq-main-title:after {
+    content: '';
+    display: block;
+    margin: 0 .9rem;
+    flex: 1;
+    border-bottom: 1px solid var(--light);
+}
+.faq-wrapper {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.faq-item {
+    display: block;
+    margin-bottom: 0.1rem;
+}
+.faq-title {
+    padding: .1rem .6rem;
+    border-radius: 0.5rem;
+    color: var(--dark);
+    border: 1px solid;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .2%;
+}
+.faq-title:after {
+    content: '\25bc';
+    display: inline-block;
+    font-size: 12px;
+    margin-block: 10px;
+}
+.faq-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    line-height: 1.6;
+    color: var(--text);
+    border: 1px solid;
+    border-width: 0 1px;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    backdrop-filter: blur(25px);
+}
+
+.accordion input[type='radio'] {
+    display: none;
+}
+.accordion input[type='radio']:checked + .faq-item .faq-title {
+    color: #fff;
+    border-color: var(--light);
+    background-color: var(--dark);
+}
+.accordion input[type='radio']:checked + .faq-item .faq-title:after {
+    transform: rotate(180deg);
+}
+.accordion input[type='radio']:checked + .faq-item .faq-content {
+    margin-block: .5rem;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all .6s, opacity 0.7s;
+}
+
+@media (max-width: 768px) {
+    .faq-wrapper {
+    width: auto;
+    padding: 0 0.3rem;
+    }
+    .faq-main-title {
+        width: 100%;
+    }
+}

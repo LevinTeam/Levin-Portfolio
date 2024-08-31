@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useRef } from 'react'
 import './Login.css'
 
 export default function Login() {
@@ -19,6 +19,18 @@ export default function Login() {
     setIsActive(false)
   }
 
+  const [inputType, setInputType] = useState('text');
+  const inputRef = useRef(null);
+
+  const showPassword = () => {
+    setInputType((prevType) => (prevType === 'text' ? 'password' : 'text'));
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInputType('password')
+  }
+
   return (
     <section className='form-container'>
       <div className={isActive ? 'wrapper active' : 'wrapper'}>
@@ -28,7 +40,7 @@ export default function Login() {
 
         <div className='form-box login'>
           <h2 className='animation' style={{ '--i': 0 , '--j': 21}}> ورود </h2>
-          <form action="#">
+          <form onSubmit={handleSubmit}>
             <div className='input-box animation' style={{ '--i': 1 , '--j': 22}}>
               <input 
                 type="number" 
@@ -41,13 +53,14 @@ export default function Login() {
             </div>
             <div className='input-box animation' style={{ '--i': 2 }}>
               <input 
-                type="password" 
+                type={inputType}
                 value={password} 
+                ref={inputRef}
                 onChange={(e) => setPassword(e.target.value)} 
                 required
               />
               <label> رمز عبور </label>
-              <i className='bx bxs-lock-alt'></i>
+              <i className='bx bxs-lock-alt' onClick={showPassword}></i>
             </div>
             <button type='submit' className='sub-btn animation' style={{ '--i': 3 , '--j': 20}}> ورود </button>
             <div className='logreg-link animation' style={{ '--i': 4 , '--j': 21}}>
@@ -63,7 +76,7 @@ export default function Login() {
 
         <div className='form-box register'>
           <h2 className='animation' style={{ '--i': 15 , '--j': 0}}> ثبت نام </h2>
-          <form>
+          <form onSubmit={handleSubmit}>
           <div className='input-box animation' style={{ '--i': 16 , '--j': 1}}>
               <input 
                 type="text" 
@@ -96,23 +109,25 @@ export default function Login() {
             </div>
             <div className='input-box animation' style={{ '--i': 19 , '--j': 2}}>
               <input 
-                type="password" 
+                type={inputType}
                 value={registerPassword} 
+                ref={inputRef}
                 onChange={(e) => setRegisterPassword(e.target.value)} 
                 required
               />
               <label> رمز عبور </label>
-              <i className='bx bxs-lock-alt'></i>
+              <i className='bx bxs-lock-alt' onClick={showPassword}></i>
             </div>
             <div className='input-box animation' style={{ '--i': 20 , '--j': 3}}>
               <input 
-                type="password" 
+                type={inputType} 
                 value={confirmPassword} 
-                onChange={(e) => setConfirmPassword(e.target.value)} 
+                ref={inputRef}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
               <label> تکرار رمز عبور  </label>
-              <i className='bx bxs-lock-alt'></i>
+              <i className='bx bxs-lock-alt' onClick={showPassword}></i>
             </div>
             <button type='submit' className='sub-btn animation' style={{ '--i': 21 , '--j': 4}}> ثبت نام </button>
             <div className='logreg-link animation' style={{ '--i': 22 , '--j': 5}}>

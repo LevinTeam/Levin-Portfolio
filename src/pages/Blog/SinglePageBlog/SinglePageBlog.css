@@ -32,3 +32,9 @@
     font-weight: 400;
     margin-block: 10px;
 }
+
+@media (max-width: 768px) {
+    .paragraph-container {
+        width: 100%;
+    }
+}

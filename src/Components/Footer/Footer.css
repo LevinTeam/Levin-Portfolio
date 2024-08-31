@@ -102,7 +102,10 @@
         flex-direction: column-reverse;
         text-align: center;
     }
-    
+    .icons-footer ul {
+        width: 200px;
+        justify-content: space-between;
+    }
     .icons-footer ul li {
         margin-inline: 0;
         margin-bottom: .5rem;

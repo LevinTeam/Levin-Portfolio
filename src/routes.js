@@ -5,6 +5,8 @@ import Login from './pages/Login/Login'
 import Blog from './pages/Blog/Blog'
 import SinglePageBlog from './pages/Blog/SinglePageBlog/SinglePageBlog'
 import AboutUs from './pages/AboutUs/AboutUs'
+import FAQ from './pages/FAQ/FAQ'
+import Privacy from './pages/Privacy/Privacy'
 
 const routes = [
     {path: '/' , element : <Index />} , 
@@ -13,6 +15,8 @@ const routes = [
     {path: '/Blog' , element : <Blog />} , 
     {path: '/Blog/:SinglePageBlogID' , element : <SinglePageBlog />} , 
     {path: '/AboutUs' , element : <AboutUs />} , 
+    {path: '/FAQ' , element : <FAQ />} , 
+    {path: '/Privacy' , element : <Privacy />} , 
     {path: '*' , element : <NotFound />}
 ]
 

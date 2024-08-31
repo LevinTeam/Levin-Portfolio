@@ -5,6 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     user-select: none;
+    height: 80vh;
 }
 
 /* THE CARD */
@@ -24,6 +25,7 @@
     font-family: Vazirmatn;
     transition: .3s ease;
     text-decoration: none;
+    height: max-content;
 }
 
 .blog-card:hover {

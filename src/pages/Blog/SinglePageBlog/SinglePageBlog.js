@@ -8,7 +8,6 @@ import ArticlesData from '../ArticlesData/ArticlesData'
     let params = useParams()
     
     const blogData = ArticlesData.find(data => data.id == params.SinglePageBlogID)
-    console.log(blogData.imgHeader);
     
     return (
       <div className='blog-page-container'>

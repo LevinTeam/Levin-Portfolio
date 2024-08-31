@@ -418,6 +418,10 @@
     color: var(--text);
 }
 
+.roadmap-top svg {
+    width: 100%;
+}
+
 .roadmap-top section {
     display: flex;
     justify-content: center;
@@ -431,12 +435,6 @@
     font-weight: 600;
     color: var(--dark);
 }
-
-/* .roadmap-top section p {
-    max-width: 40%;
-    text-align: center;
-    margin-top: 1rem;
-} */
 
 .roadmap-bottom {
     width: 70%;
@@ -548,7 +546,7 @@
 
     /* Roadmap Card */
     .roadmap-cart {
-        width: calc(48% - 40px);
+        width: 50%;
     }
 
 

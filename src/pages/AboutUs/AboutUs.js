@@ -7,9 +7,9 @@ const AboutUs = () => {
         // CEO Card Info
 
         const CEO = [
-            {id: 1 , name:'Shervin Fatahi' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'FRONT' , about: 'من یک توسعه‌دهنده فرانت‌اند با تجربه در React، Vanilla JavaScript، Bootstrap و Sass هستم. همچنین به عنوان یک طراح وبسایت با Figma فعالیت می‌کنم.' , portfolio: '#' },
-            {id: 2 , name:'Pouya Alijany' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'SEO' , about: 'من یک متخصص SEO و توسعه‌دهنده فرانت‌اند هستم. مهارت اصلی من در کار با React و Vanilla JavaScript است، اما اولویت اصلی من بهینه‌سازی سایت‌ها برای موتورهای جستجو (SEO).' , portfolio: '#' },
-            {id: 3 , name:'Arman Mohebrad' , profile:'Images/Baners/Card-List-Ninja.svg' , job: 'BACK' , about: 'من یک توسعه‌دهنده بک‌اند هستم که با Django و Node.js کار می‌کنم. همچنین تخصص ویژه‌ای در امنیت سایت‌ها دارم. (سرباز وطن | آبدارچی شرکت)' , portfolio: '#' },
+            {id: 1 , name:'Shervin Fatahi' , profile:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFVHR62PqqslJrmbNHhwiH3Cmb99-h10mi6g&s' , job: 'FRONT' , about: 'من یک توسعه‌دهنده فرانت‌اند با تجربه در React، Vanilla JavaScript، Bootstrap و Sass هستم. همچنین به عنوان یک طراح وبسایت با Figma فعالیت می‌کنم.' , portfolio: '#' },
+            {id: 2 , name:'Pouya Alijany' , profile:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFVHR62PqqslJrmbNHhwiH3Cmb99-h10mi6g&s' , job: 'SEO' , about: 'من یک متخصص SEO و توسعه‌دهنده فرانت‌اند هستم. مهارت اصلی من در کار با React و Vanilla JavaScript است، اما اولویت اصلی من بهینه‌سازی سایت‌ها برای موتورهای جستجو (SEO).' , portfolio: '#' },
+            {id: 3 , name:'Arman Mohebrad' , profile:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFVHR62PqqslJrmbNHhwiH3Cmb99-h10mi6g&s' , job: 'BACK' , about: 'من یک توسعه‌دهنده بک‌اند هستم که با Django و Node.js کار می‌کنم. همچنین تخصص ویژه‌ای در امنیت سایت‌ها دارم. (سرباز وطن | آبدارچی شرکت)' , portfolio: '#' },
         ]
 
     return(
