@@ -2,7 +2,8 @@ import React, { useState , useRef } from 'react'
 import { toast } from 'react-hot-toast';
 import './Login.css'
 import { Helmet } from 'react-helmet';
-
+import Configs from '../../Private/Configs/Configs';
+import axios from 'axios';
 export default function Login() {
 
   const [isActive, setIsActive] = useState(false)
@@ -30,6 +31,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(registerPhoneNumber, password, registerPassword, confirmPassword, registerUserFirstName, registerUserLastName)
     setInputType('password')
     toast('Here is your toast!')
   }
@@ -38,7 +40,7 @@ export default function Login() {
     <section className='form-container'>
 
     <Helmet>
-      <title> {isActive ? "Signin" : "Login"} </title>
+      <title> {isActive ? "Sign up" : "Login"} </title>
     </Helmet>
 
       <div className={isActive ? 'wrapper active' : 'wrapper'}>
@@ -152,4 +154,43 @@ export default function Login() {
       </div>
     </section>
   )
+}
+
+
+const SubmitForm = ({PhoneNumber: PhoneNumber, Password: Password, ConfrimPassword: ConfrimPassword, FirstName: FirstName, LastName: LastName}) => {
+  axios.post(`${Configs.API_URL}:${Configs.API_PORT}/api/v${Configs.API_VERSION}/${Configs.API_ROUTE.USER}/create-comment`, {
+    ApiKey: Configs.API_KEY,
+    PhoneNumber: PhoneNumber,
+  }).then(async response => {
+    switch (response.status) {
+      case 201:
+        if (response.data.Data === "Comment Created") {
+          console.log(`Comment Created with ID: #${response.data.CommentData.CommentID}`)
+          return {
+            Data: response.data.CommentData
+          }
+        }
+      break;
+
+      default:break;
+    }
+  }).catch(async error => {
+    switch (error.response.status) {
+      case 404:
+        console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        return {
+          Data: error.response.data.Data
+        }
+      break;
+
+      case 500:
+        console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        return {
+          Data: error.response.data.Data
+        }
+      break;
+
+      default:break;
+    }
+  })
 }
