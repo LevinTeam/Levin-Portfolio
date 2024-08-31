@@ -7,6 +7,8 @@ import UXbox from './Components/UXbox/UXbox';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';   
 import Ripple from './assest/Ripple/Ripple';
+import { Toaster } from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 function App() {
 
@@ -14,10 +16,15 @@ function App() {
 
   return (
       <Container>
+
+    <Helmet>
+      <title> Levin </title>
+    </Helmet>
+
+        <Toaster reverseOrder={true}/>
       <BG />
       <Ripple />
         <Header></Header>
-
       <UXbox></UXbox>
       {router}
       <Footer></Footer>

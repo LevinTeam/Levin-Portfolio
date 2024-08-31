@@ -1,5 +1,7 @@
 import React, { useState , useRef } from 'react'
+import { toast } from 'react-hot-toast';
 import './Login.css'
+import { Helmet } from 'react-helmet';
 
 export default function Login() {
 
@@ -19,7 +21,7 @@ export default function Login() {
     setIsActive(false)
   }
 
-  const [inputType, setInputType] = useState('text');
+  const [inputType, setInputType] = useState('password');
   const inputRef = useRef(null);
 
   const showPassword = () => {
@@ -29,10 +31,16 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setInputType('password')
+    toast('Here is your toast!')
   }
 
   return (
     <section className='form-container'>
+
+    <Helmet>
+      <title> {isActive ? "Signin" : "Login"} </title>
+    </Helmet>
+
       <div className={isActive ? 'wrapper active' : 'wrapper'}>
         
         <span className='bg-animate'></span>
