@@ -3,6 +3,8 @@ import './ContactUs.css'
 import Btn from './../../assest/Btn/Btn'
 import { useState } from 'react'
 import scrollTop from '../../utils';
+import Configs from '../../Private/Configs/Configs'
+import axios from 'axios';
 
 function ContactUs() {
 
@@ -24,7 +26,13 @@ function ContactUs() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    SubmitForm({
+      Name: formData.name,
+      PhoneNumber: formData.phone,
+      Email: formData.email,
+      CommentSubject: formData.subject,
+      CommentMessage: formData.message
+    })
 
     setFormData({
       name: '',
@@ -151,6 +159,48 @@ function ContactUs() {
             </div>            
         </div>
     )
+}
+
+const SubmitForm = async ({Name: Name, Email: Email, PhoneNumber: PhoneNumber, CommentSubject: CommentSubject, CommentMessage: CommentMessage}) => {
+  axios.post(`${Configs.API_URL}:${Configs.API_PORT}/api/v${Configs.API_VERSION}/${Configs.API_ROUTE.USER}/create-comment`, {
+    ApiKey: Configs.API_KEY,
+    Name: Name,
+    Email: Email,
+    PhoneNumber: PhoneNumber,
+    Subject: CommentSubject,
+    CommentMessage: CommentMessage
+  }).then(async response => {
+    switch (response.status) {
+      case 201:
+        if (response.data.Data === "Comment Created") {
+          console.log(`Comment Created with ID: #${response.data.CommentData.CommentID}`)
+          return {
+            Data: response.data.CommentData
+          }
+        }
+      break;
+
+      default:break;
+    }
+  }).catch(async error => {
+    switch (error.response.status) {
+      case 404:
+        console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        return {
+          Data: error.response.data.Data
+        }
+      break;
+
+      case 500:
+        console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        return {
+          Data: error.response.data.Data
+        }
+      break;
+
+      default:break;
+    }
+  })
 }
 
 export default ContactUs ;
