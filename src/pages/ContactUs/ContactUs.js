@@ -163,12 +163,16 @@ function ContactUs() {
 
 const SubmitForm = async ({Name: Name, Email: Email, PhoneNumber: PhoneNumber, CommentSubject: CommentSubject, CommentMessage: CommentMessage}) => {
   axios.post(`${Configs.API_URL}:${Configs.API_PORT}/api/v${Configs.API_VERSION}/${Configs.API_ROUTE.USER}/create-comment`, {
-    ApiKey: Configs.API_KEY,
+    // ApiKey: Configs.API_KEY,
     Name: Name,
     Email: Email,
     PhoneNumber: PhoneNumber,
     Subject: CommentSubject,
     CommentMessage: CommentMessage
+  }, {
+    headers: {
+      authorization: Configs.API_KEY
+    }
   }).then(async response => {
     switch (response.status) {
       case 201:
