@@ -29,18 +29,24 @@ export default function Login() {
     setInputType((prevType) => (prevType === 'text' ? 'password' : 'text'));
   }
 
-  const handleSubmit = (e) => {
+  const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log(registerPhoneNumber, password, registerPassword, confirmPassword, registerUserFirstName, registerUserLastName)
+    console.log(phoneNumber , password)
     setInputType('password')
-    toast('Here is your toast!')
+    toast('Log IN')
   }
-
+  
+  const handleSingupSubmit = (e) => {
+    e.preventDefault();
+    console.log(registerPhoneNumber, registerPassword, confirmPassword, registerUserFirstName, registerUserLastName)
+    setInputType('password')
+    toast('Sing Up')
+  }
   return (
     <section className='form-container'>
 
     <Helmet>
-      <title> {isActive ? "Sign up" : "Login"} </title>
+      <title> {isActive ? "Signup" : "Login"} </title>
     </Helmet>
 
       <div className={isActive ? 'wrapper active' : 'wrapper'}>
@@ -50,7 +56,7 @@ export default function Login() {
 
         <div className='form-box login'>
           <h2 className='animation' style={{ '--i': 0 , '--j': 21}}> ورود </h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleLoginSubmit}>
             <div className='input-box animation' style={{ '--i': 1 , '--j': 22}}>
               <input 
                 type="number" 
@@ -86,7 +92,7 @@ export default function Login() {
 
         <div className='form-box register'>
           <h2 className='animation' style={{ '--i': 15 , '--j': 0}}> ثبت نام </h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSingupSubmit}>
           <div className='input-box animation' style={{ '--i': 16 , '--j': 1}}>
               <input 
                 type="text" 
