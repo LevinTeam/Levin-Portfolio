@@ -4,9 +4,7 @@ const Configs = {
     API_PORT: '3001',
     API_VERSION: '1',
     API_ROUTE: {
-        USER: 'user',
-        LOGIN: '',
-        SIGNUP: ''
+        USER: 'user'
     }
 }
 
