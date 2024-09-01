@@ -2,6 +2,7 @@ import React from 'react'
 import './SinglePageBlog.css'
 import { useParams } from 'react-router-dom'
 import ArticlesData from '../ArticlesData/ArticlesData'
+import { Helmet } from "react-helmet";
 
  const SinglePageBlog = () =>  {
 

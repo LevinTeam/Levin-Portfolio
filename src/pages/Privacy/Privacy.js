@@ -1,5 +1,7 @@
 import React from 'react'
 import './Privacy.css'
+import { Helmet } from "react-helmet";
+
 
 const Privacy = () => {
 
@@ -21,6 +23,16 @@ const Privacy = () => {
 
     return (
         <div className='privacy-container'>
+            <Helmet>
+            <title> سوالات متداول | شرکت لوین </title>
+            <meta name="description" content="در بخش سوالات متداول شرکت لوین، پاسخ به رایج‌ترین سوالات شما درباره خدمات طراحی وب‌سایت، سئو، امنیت و توسعه ربات‌های تلگرام و دیسکورد را مشاهده کنید. اگر سوال دیگری دارید، تیم ما آماده پاسخگویی است."></meta>
+            <meta name="keywords" content=" سوالات متداول, FAQ, پرسش‌های رایج, طراحی وب‌سایت, خدمات سئو, امنیت وب‌سایت, ربات تلگرام, ربات دیسکورد, شرکت لوین"></meta>
+            <link rel="canonical" href="https://localhost:3000"></link>
+            <meta property="og:title" content="سوالات متداول | شرکت لوین - پاسخ به پرسش‌های شما درباره خدمات  طراحی وب ، سئو و امنیت"></meta>
+            <meta property="og:description" content="پاسخ به پرسش‌های متداول شما درباره خدمات طراحی وب‌سایت، سئو، امنیت و توسعه ربات‌های تلگرام و دیسکورد در شرکت لوین. اگر سوال دیگری دارید، تیم ما در کنار شماست"></meta>
+            <meta property="og:image" content=""></meta>
+            <meta property="og:url" content="https://localhost:3000/"></meta>
+            </Helmet>
             <div className='privacy-content'>
                 <h2> حریم خصوصی </h2>
                 {privacyCases.map((info , Index) => (

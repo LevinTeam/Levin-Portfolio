@@ -16,11 +16,6 @@ function App() {
 
   return (
       <Container>
-
-    <Helmet>
-      <title> Levin </title>
-    </Helmet>
-
         <Toaster reverseOrder={true}/>
       <BG />
       <Ripple />

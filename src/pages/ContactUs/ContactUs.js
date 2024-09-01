@@ -5,6 +5,7 @@ import { useState } from 'react'
 import scrollTop from '../../utils';
 import Configs from '../../Private/Configs/Configs'
 import axios from 'axios';
+import { Helmet } from "react-helmet";
 
 function ContactUs() {
 
@@ -60,6 +61,15 @@ function ContactUs() {
 
     return (
         <div className='contactUs-container' >
+          <Helmet>
+          <title>درباره ما | شرکت لوین - پیشرو در طراحی وب‌سایت و سئو با رویکردی نوآورانه</title>
+          <meta name="description" content="شرکت لوین با تیمی متعهد و تخصصی در زمینه طراحی وب‌سایت، سئو، امنیت و توسعه ربات‌های تلگرام و دیسکورد، تلاش می‌کند تا بهترین راهکارها را برای رشد آنلاین کسب‌وکارها ارائه دهد. با ما در این مسیر موفقیت همراه شوید."></meta>
+          <meta name="keywords" content="درباره ما, شرکت لوین, طراحی وب‌سایت, خدمات سئو, تیم تخصصی, امنیت وب‌سایت, ربات تلگرام, ربات دیسکورد, نوآوری در وب"></meta>
+            <link rel="canonical" href="https://localhost:3000"></link>
+            <meta property="og:title" content="درباره ما | شرکت لوین - پیشرو در طراحی وب‌سایت و سئو با رویکردی نوآورانه"></meta>
+            <meta property="og:description" content="با تیم تخصصی شرکت لوین آشنا شوید؛ ارائه‌دهنده خدمات طراحی وب‌سایت، سئو و امنیت وب با رویکردی نوآورانه. هدف ما، رشد و موفقیت آنلاین کسب‌وکار شماست."></meta>
+            <meta property="og:url" content="https://localhost:3000/"></meta>
+            </Helmet>
             <div className='comment-form' >
             <form className="feedback-form" onSubmit={handleSubmit}>
       <h2>ارسال دیدگاه</h2>

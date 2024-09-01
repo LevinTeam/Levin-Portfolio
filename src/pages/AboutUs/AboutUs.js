@@ -1,6 +1,7 @@
 import React from 'react'
 import './AboutUs.css'
 import TiltCard from '../../Components/TiltCard/TiltCard'
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
 
@@ -14,6 +15,16 @@ const AboutUs = () => {
 
     return(
         <div className='aboutus-container'>
+            <Helmet>
+            <title>تماس با شرکت لوین | در ارتباط با ما، همراهی مطمئن برای رشد کسب‌وکار شما</title>
+            <meta name="description" content="برای ارتباط مستقیم با تیم لوین و دریافت مشاوره‌های تخصصی در زمینه طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد، با ما تماس بگیرید. ما همراه شما هستیم تا مسیر موفقیت شما هموارتر شود."></meta>
+            <meta name="keywords" content="تماس با ما, ارتباط با شرکت لوین, مشاوره رایگان, پشتیبانی, طراحی وب‌سایت, خدمات سئو, تیم حرفه‌ای, امنیت وب‌سایت"></meta>
+            <link rel="canonical" href="https://localhost:3000"></link>
+            <meta property="og:title" content="تماس با شرکت لوین | در ارتباط با ما، همراهی مطمئن برای رشد کسب‌وکار شما"></meta>
+            <meta property="og:description" content="برای دریافت مشاوره‌های تخصصی در زمینه طراحی و توسعه وب‌سایت، سئو و امنیت، همین حالا با تیم لوین تماس بگیرید. ما برای پاسخگویی به سوالات و نیازهای شما آماده‌ایم."></meta>
+            <meta property="og:image" content=""></meta>
+            <meta property="og:url" content="https://localhost:3000/"></meta>
+            </Helmet>
             <div className='aboutus-content'>
                 <section className='aboutus-text'>
                     <h2> درباره لوین </h2>

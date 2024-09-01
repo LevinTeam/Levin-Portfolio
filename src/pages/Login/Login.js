@@ -159,7 +159,14 @@ export default function Login() {
   return (
     <section className="form-container">
       <Helmet>
-        <title> {isActive ? "Signup" : "Login"} </title>
+        <title> {isActive ? "ثبت‌نام | شرکت لوین" : "ورود | شرکت لوین"} </title>
+        <meta name="description" content="ورود به حساب کاربری و ثبت‌نام در شرکت لوین برای دسترسی به خدمات طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد. عضویت سریع و آسان."></meta>
+        <meta name="keywords" content="ورود, ثبت‌نام, لاگین, ساین آپ, حساب کاربری, شرکت لوین, خدمات آنلاین, طراحی وب‌سایت, سئو"></meta>
+        <link rel="canonical" href="https://localhost:3000"></link>
+        <meta property="og:title" content={isActive ? "ثبت‌نام | شرکت لوین" : "ورود | شرکت لوین"}></meta>
+        <meta property="og:description" content="ورود به حساب کاربری و ثبت‌نام در شرکت لوین برای دسترسی به خدمات طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد. عضویت سریع و آسان"></meta>
+        <meta property="og:image" content=""></meta>
+        <meta property="og:url" content="https://localhost:3000/"></meta>
       </Helmet>
 
       <div className={isActive ? "wrapper active" : "wrapper"}>

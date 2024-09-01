@@ -1,5 +1,7 @@
 import React , {useState} from 'react'
 import './FAQ.css'
+import { Helmet } from "react-helmet";
+
 
 const FAQ = () => {
 
@@ -40,6 +42,16 @@ const FAQ = () => {
 
     return (
     <div className='faq-container'>
+        <Helmet>
+        <title>سوالات متداول | شرکت لوین - پاسخ به پرسش‌های شما درباره خدمات طراحی وب ، سئو و امنیت</title>
+        <meta name="description" content="در صفحه حریم خصوصی و سیاست‌های شرکت لوین، نحوه جمع‌آوری، استفاده و محافظت از اطلاعات شخصی کاربران به وضوح شرح داده شده است. ما متعهد به حفاظت از حریم خصوصی شما هستیم و تمامی قوانین را رعایت می‌کنیم."></meta>
+        <meta name="keywords" content="حریم خصوصی, سیاست‌ها, حفاظت از داده, شرکت لوین, امنیت اطلاعات, سیاست حریم خصوصی, محافظت از حریم خصوصی, قوانین حفاظت داده"></meta>
+        <link rel="canonical" href="https://localhost:3000"></link>
+        <meta property="og:title" content="حریم خصوصی و سیاست‌ها | شرکت لوین - محافظت از اطلاعات"></meta>
+        <meta property="og:description" content="این صفحه، نحوه جمع‌آوری و استفاده از اطلاعات شما و نیز اقدامات امنیتی ما برای حفاظت از داده‌های شخصی‌تان توضیح داده شده است"></meta>
+        <meta property="og:image" content=""></meta>
+        <meta property="og:url" content="https://localhost:3000/"></meta>
+        </Helmet>
             <div className="faq-wrapper">
             <div className="faq-main-title"> سوالات متداول </div>
 

@@ -2,6 +2,7 @@ import React , {useState , useEffect} from 'react'
 import './Blog.css'
 import { Link } from 'react-router-dom'
 import ArticlesData from './ArticlesData/ArticlesData'
+import { Helmet } from "react-helmet";
 
 const Blog =() => {
 
@@ -17,6 +18,17 @@ const Blog =() => {
 
   return (
 <div className='blog-container'>
+        <Helmet>
+        <title>وبلاگ شرکت لوین | مقالات و نکات تخصصی طراحی وب‌سایت، سئو و امنیت
+        </title>
+        <meta name="description" content="در وبلاگ شرکت لوین، مقالات و نکات تخصصی در زمینه طراحی وب‌سایت، سئو، امنیت وب و توسعه ربات‌های تلگرام و دیسکورد را مطالعه کنید. با ما همراه شوید تا از جدیدترین ترندها و بهترین روش‌ها بهره‌مند شوید."></meta>
+        <meta name="keywords" content="وبلاگ, مقالات طراحی وب, سئو, امنیت وب‌سایت, توسعه ربات, ربات تلگرام, ربات دیسکورد, نکات تخصصی, شرکت لوین"></meta>
+        <link rel="canonical" href="https://localhost:3000"></link>
+        <meta property="og:title" content="وبلاگ شرکت لوین | مقالات و نکات تخصصی طراحی وب‌سایت، سئو و امنیت"></meta>
+        <meta property="og:description" content="وب‌سایت، سئو و امنیت وب در وبلاگ شرکت لوین. همراه ما باشید تا از جدیدترین اطلاعات بهره‌مند شوید"></meta>
+        <meta property="og:image" content=""></meta>
+        <meta property="og:url" content="https://localhost:3000/"></meta>
+        </Helmet>
 
     {skeleton ? (
       articles.map( (info)=> (

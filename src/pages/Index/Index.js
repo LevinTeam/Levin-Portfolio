@@ -5,6 +5,8 @@ import Btn from '../../assest/Btn/Btn'
 import Levinteam from '../../assest/Neon/Levinteam'
 import PoPup from '../../assest/PoPup/PoPup'
 import scrollTop from '../../utils';
+import { Helmet } from "react-helmet";
+
 
 export default function Index() {
 
@@ -75,6 +77,16 @@ export default function Index() {
 
   return (
     <>
+      <Helmet>
+      <title>شرکت لوین | طراحی وب‌سایت، سئو و امنیت و طراحی ربات های تلگرام و دیسکورد</title>
+            <meta name="description" content="شرکت لوین ارائه دهنده خدمات طراحی و توسعه وب‌سایت، سئو، امنیت و طراحی ربات‌های تلگرام و دیسکورد. با تیم حرفه‌ای ما وب‌سایت خود را به سطح بالاتری ببرید."></meta>
+            <meta name="keywords" content="طراحی وب‌سایت, توسعه وب, سئو, امنیت وب‌سایت, ربات تلگرام, ربات دیسکورد, طراحی با فیگما, جنگو, نود جی‌اس, وانیلا، ری‌اکت،"></meta>
+            <link rel="canonical" href="https://localhost:3000"></link>
+            <meta property="og:title" content="شرکت لوین | طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد"></meta>
+            <meta property="og:description" content="شرکت لوین ارائه دهنده خدمات طراحی و توسعه وب‌سایت، سئو، امنیت و طراحی ربات‌های تلگرام و دیسکورد. با تیم حرفه‌ای ما وب‌سایت خود را به سطح بالاتری ببرید."></meta>
+            <meta property="og:image" content=""></meta>
+            <meta property="og:url" content="https://localhost:3000/"></meta>
+      </Helmet>
  <h1 style={{display:"none"}}>لوین تیمSEO</h1> {/* This section should go to the external CSS file after SEO */}
 
     {/* Hero box => */}
