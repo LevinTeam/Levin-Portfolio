@@ -61,7 +61,7 @@ export default function Login() {
         switch (error.response.status) {
           case 400:
             console.log(`Error -> Login -> handleLoginSubmit => ${error.response.data.Data}`)
-            toast('Account not registred before')
+            toast(error.response.data.Data)
             cookies.set('userToken', "", { path: '/' })
             return {
               Data: error.response.data.Data
@@ -70,7 +70,7 @@ export default function Login() {
 
           case 404:
             console.log(`Error -> Login -> handleLoginSubmit => ${error.response.data.Data}`)
-            toast('Password incorrect')
+            toast(error.response.data.Data)
             cookies.set('userToken', "", { path: '/' })
             return {
               Data: error.response.data.Data
@@ -91,65 +91,61 @@ export default function Login() {
     e.preventDefault();
 
     if (typeof registerPassword && typeof confirmPassword == "string") {
-      if (registerPassword === confirmPassword) {
-        axios.post(`${Configs.API_URL}/api/v${Configs.API_VERSION}/${Configs.API_ROUTE.USER}/create`, {
-          FirstName: registerUserFirstName,
-          LastName: registerUserLastName,
-          PhoneNumber: registerPhoneNumber,
-          Password: registerPassword
-        }, {
-          headers: {
-            authorization: Configs.API_KEY
-          }
-        }).then(async response => {
-          switch (response.status) {
-            case 201:
-              console.log(`Account Created for Number: ${response.data.UserData.UserPhoneNumber}`)
-              toast('Account Successfully Created')
-              cookies.set('userToken', response.data.UserToken, { path: '/' })
-              return {
-                Data: response.data.UserData,
-                Token: response.data.UserToken
-              }
-            break;
+      axios.post(`${Configs.API_URL}/api/v${Configs.API_VERSION}/${Configs.API_ROUTE.USER}/create`, {
+        FirstName: registerUserFirstName,
+        LastName: registerUserLastName,
+        PhoneNumber: registerPhoneNumber,
+        Password: ((registerPassword === confirmPassword) ? registerPassword : toast("password and confirmation password should be match together"))
+      }, {
+        headers: {
+          authorization: Configs.API_KEY
+        }
+      }).then(async response => {
+        switch (response.status) {
+          case 201:
+            console.log(`Account Created for Number: ${response.data.UserData.UserPhoneNumber}`)
+            toast('Account Successfully Created')
+            cookies.set('userToken', response.data.UserToken, { path: '/' })
+            return {
+              Data: response.data.UserData,
+              Token: response.data.UserToken
+            }
+          break;
 
-            default:break;
-          }
-        }).catch(async error => {
-          switch (error.response.status) {
-            case 400:
-              console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
-              toast('This phone number already registred before')
-              cookies.set('userToken', "", { path: '/' })
-              return {
-                Data: error.response.data.Data
-              }
-            break;
+          default:break;
+        }
+      }).catch(async error => {
+        switch (error.response.status) {
+          case 400:
+            console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
+            toast(error.response.data.Data)
+            cookies.set('userToken', "", { path: '/' })
+            return {
+              Data: error.response.data.Data
+            }
+          break;
 
-            case 500:
-              console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
-              toast('an unknown error happened when creating account')
-              cookies.set('userToken', "", { path: '/' })
-              return {
-                Data: error.response.data.Data
-              }
-            break;
+          case 500:
+            console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
+            toast('خطایی در هنگام ساخت اکانت شما رخ داد')
+            cookies.set('userToken', "", { path: '/' })
+            return {
+              Data: error.response.data.Data
+            }
+          break;
 
-            case 503:
-              console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
-              toast('an server error happened')
-              cookies.set('userToken', "", { path: '/' })
-              return {
-                Data: error.response.data.Data
-              }
-            break;
+          case 503:
+            console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
+            toast('an server error happened')
+            cookies.set('userToken', "", { path: '/' })
+            return {
+              Data: error.response.data.Data
+            }
+          break;
 
-            default:break;
-          }
-        })
-      } else {
-        toast("password and confirmation password should be match together");
-      }
+          default:break;
+        }
+      })
     } else {
       toast("password type should be string");
     }
