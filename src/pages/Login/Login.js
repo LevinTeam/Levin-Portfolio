@@ -95,7 +95,7 @@ export default function Login() {
         FirstName: registerUserFirstName,
         LastName: registerUserLastName,
         PhoneNumber: registerPhoneNumber,
-        Password: ((registerPassword === confirmPassword) ? registerPassword : toast("password and confirmation password should be match together"))
+        Password: ((registerPassword === confirmPassword) ? registerPassword : toast("رمز عبور و تایید رمز عبور باید دقیقا شبیه یکدیگر باشند."))
       }, {
         headers: {
           authorization: Configs.API_KEY
