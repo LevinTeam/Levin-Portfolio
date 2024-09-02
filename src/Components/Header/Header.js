@@ -33,18 +33,30 @@ const closeMenu = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  function getCookie(name) {
+    let value = `; ${document.cookie}`;
+    let parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+}
+
+let userToken = getCookie('userToken');
 
   return (
     <div className='main-header'>
       <header className={`header ${scroll ? 'header-scroller' : ''}`}>
         <div className='header-buttons'>
-          <Btn
+          { !userToken ? (
+            <Btn
             text={'ثبت نام | ورود'} 
             backgroundColor={'var(--primary)'} 
             textColor={'var(--bg-btn-color)'} 
             to={'/login'}
             onClick={scrollTop}
           />
+        ) : (
+            <p className='user-panel'> خوش آمدید </p>
+          ) }
         </div>
         <div className='header-links'>
           <ul className={`header-items ${menuOpen ? 'mobile-menu-items' : ''}`}>

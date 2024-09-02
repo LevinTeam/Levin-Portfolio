@@ -6,6 +6,7 @@
     align-items: center;
     transition: all .3 ease;
     user-select: none;
+    font-family: Vazirmatn;
 }
 
 .header {
@@ -57,7 +58,7 @@
     font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
-    font-family: Vazirmatn;
+
 }
 
 ul {
@@ -67,6 +68,18 @@ ul {
 .header-buttons {
     display: flex;
 }
+
+.header-buttons .user-panel {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--text);
+}
+
+/* .header-buttons .user-panel:hover::before {
+    content: 'به زودی';
+    display: flex;
+    position: absolute;
+} */
 
 .menu-icon {
     display: none;
