@@ -24,8 +24,9 @@
     padding: 10px;
 }
 
-.paragraph-div h5 {
+.paragraph-div h2 {
     font-weight: 700;
+    font-size: 18px;
 }
 
 .paragraph-div p {

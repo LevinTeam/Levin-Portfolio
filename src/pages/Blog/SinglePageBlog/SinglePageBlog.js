@@ -23,14 +23,15 @@ import { Helmet } from "react-helmet";
           <meta property="og:url" content="https://localhost:3000/"></meta>
         </Helmet>
         <h2>{blogData.title}</h2>
-        <img src={blogData.imgHeader} alt="" />
+        <img src={blogData.imgHeader} alt={blogData.imgCoverAlt} title={blogData.title} />
         <hr />
         <div className='paragraph-container'>
           {
           blogData.content.map((paragraph , index) => (
             <div key={index} className='paragraph-div'>
-              <h5> {paragraph.heading} </h5>
+              <h2> {paragraph.heading} </h2>
             <p> {paragraph.paragraph} </p>
+            {paragraph.img ? (<img src={paragraph.img} alt={paragraph.alt} title={paragraph.heading}/>) : (<></>)}
             </div>
           ))
           }

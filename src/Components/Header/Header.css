@@ -30,10 +30,9 @@
     width: auto;
     padding: 0 50px ;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
-    background-color: var(--bg-btn-color);
 }
 
 .header-logo {
