@@ -22,7 +22,7 @@ const AboutUs = () => {
             <link rel="canonical" href="https://localhost:3000"></link>
             <meta property="og:title" content="تماس با شرکت لوین | در ارتباط با ما، همراهی مطمئن برای رشد کسب‌وکار شما"></meta>
             <meta property="og:description" content="برای دریافت مشاوره‌های تخصصی در زمینه طراحی و توسعه وب‌سایت، سئو و امنیت، همین حالا با تیم لوین تماس بگیرید. ما برای پاسخگویی به سوالات و نیازهای شما آماده‌ایم."></meta>
-            <meta property="og:image" content=""></meta>
+            <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
             <meta property="og:url" content="https://localhost:3000/"></meta>
             </Helmet>
             <div className='aboutus-content'>

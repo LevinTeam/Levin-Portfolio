@@ -17,7 +17,6 @@ const closeMenu = () => {
   const links = [
     { id: 1, url: '/', topText: 'خانه', bottomText: 'خانه' },
     { id: 2, url: '/Blog', topText: 'وبلاگ', bottomText: 'وبلاگ' },
-    // { id: 4, url: '/Chat', topText: 'مشاوره', bottomText: 'مشاوره' },
     { id: 3, url: '/AboutUs', topText: 'درباره ما', bottomText: 'درباره ما' },
     { id: 4, url: '/ContactUs', topText: 'تماس با ما', bottomText: 'تماس با ما' },
   ];
@@ -41,6 +40,7 @@ const closeMenu = () => {
 }
 
 let userToken = getCookie('userToken');
+console.log(`User Token in header -> ${userToken}`)
 
   return (
     <div className='main-header'>

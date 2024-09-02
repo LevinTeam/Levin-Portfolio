@@ -17,7 +17,7 @@ export default function NotFound() {
             <link rel="canonical" href="https://localhost:3000"></link>
             <meta property="og:title" content="صفحه مورد نظر پیدا نشد | شرکت لوین - بازگشت به مسیر درست"></meta>
             <meta property="og:description" content=" متاسفانه صفحه‌ای که به دنبال آن بودید وجود ندارد. با کمک لینک‌های زیر می‌توانید به صفحات دیگر بازگردید."></meta>
-            <meta property="og:image" content=""></meta>
+            <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
             <meta property="og:url" content="https://localhost:3000/"></meta>
             </Helmet>
     <div className='err-404'>

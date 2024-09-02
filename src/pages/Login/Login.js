@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Configs from "../../Private/Configs/Configs";
 import axios from "axios";
 import Cookies from "universal-cookie";
+import { useNavigate } from "react-router-dom";
 
 const cookies = new Cookies();
 
@@ -17,6 +18,7 @@ export default function Login() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [registerUserFirstName, setRegisterUserFirstName] = useState("");
   const [registerUserLastName, setRegisterUserLastName] = useState("");
+  const navigate = useNavigate()
 
   const active = () => {
     setIsActive(true);
@@ -48,6 +50,7 @@ export default function Login() {
           case 200:
             console.log(`Account Successfully Loggined for Number : ${response.data.UserData.UserPhoneNumber}`)
             toast.success('خوش آمدید')
+            navigate('/')
             cookies.set('userToken', response.data.UserToken, { path: '/' })
             return {
               Data: response.data.UserData,
@@ -105,6 +108,7 @@ export default function Login() {
           case 201:
             console.log(`Account Created for Number: ${response.data.UserData.UserPhoneNumber}`)
             toast.success('خوش آمدید')
+            navigate('/')
             cookies.set('userToken', response.data.UserToken, { path: '/' })
             return {
               Data: response.data.UserData,
@@ -161,7 +165,7 @@ export default function Login() {
         <link rel="canonical" href="https://localhost:3000"></link>
         <meta property="og:title" content={isActive ? "ثبت‌نام | شرکت لوین" : "ورود | شرکت لوین"}></meta>
         <meta property="og:description" content="ورود به حساب کاربری و ثبت‌نام در شرکت لوین برای دسترسی به خدمات طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد. عضویت سریع و آسان"></meta>
-        <meta property="og:image" content=""></meta>
+        <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
         <meta property="og:url" content="https://localhost:3000/"></meta>
       </Helmet>
 

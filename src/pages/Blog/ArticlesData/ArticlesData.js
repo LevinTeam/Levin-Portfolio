@@ -4,6 +4,10 @@ const ArticlesData = [
     {
     id: 1,
     title: 'راهنمای کامل SEO برای توسعه‌دهندگان فرانت‌اند' ,
+    description: '',
+    keywords: '',
+    ogTitle: '',
+    ogDescription: '',
     preview:'همه چیزهایی که یک توسعه‌دهنده فرانت‌اند باید درباره SEO بداند، از تگ‌های HTML تا بهینه‌سازی سرعت و واکنش‌گرایی...' ,
     imgCover:'Images/Articles/1/cover.jpg' ,
     imgHeader:'/Images/Articles/1/Header.jpg' ,

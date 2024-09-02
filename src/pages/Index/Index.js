@@ -83,7 +83,7 @@ export default function Index() {
             <link rel="canonical" href="https://localhost:3000"></link>
             <meta property="og:title" content="شرکت لوین | طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد"></meta>
             <meta property="og:description" content="شرکت لوین ارائه دهنده خدمات طراحی و توسعه وب‌سایت، سئو، امنیت و طراحی ربات‌های تلگرام و دیسکورد. با تیم حرفه‌ای ما وب‌سایت خود را به سطح بالاتری ببرید."></meta>
-            <meta property="og:image" content=""></meta>
+            <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
             <meta property="og:url" content="https://localhost:3000/"></meta>
       </Helmet>
  <h1 style={{display:"none"}}>لوین تیمSEO</h1> {/* This section should go to the external CSS file after SEO */}

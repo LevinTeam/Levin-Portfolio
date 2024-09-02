@@ -49,7 +49,7 @@ const FAQ = () => {
         <link rel="canonical" href="https://localhost:3000"></link>
         <meta property="og:title" content="حریم خصوصی و سیاست‌ها | شرکت لوین - محافظت از اطلاعات"></meta>
         <meta property="og:description" content="این صفحه، نحوه جمع‌آوری و استفاده از اطلاعات شما و نیز اقدامات امنیتی ما برای حفاظت از داده‌های شخصی‌تان توضیح داده شده است"></meta>
-        <meta property="og:image" content=""></meta>
+        <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
         <meta property="og:url" content="https://localhost:3000/"></meta>
         </Helmet>
             <div className="faq-wrapper">

@@ -68,6 +68,7 @@ function ContactUs() {
             <link rel="canonical" href="https://localhost:3000"></link>
             <meta property="og:title" content="درباره ما | شرکت لوین - پیشرو در طراحی وب‌سایت و سئو با رویکردی نوآورانه"></meta>
             <meta property="og:description" content="با تیم تخصصی شرکت لوین آشنا شوید؛ ارائه‌دهنده خدمات طراحی وب‌سایت، سئو و امنیت وب با رویکردی نوآورانه. هدف ما، رشد و موفقیت آنلاین کسب‌وکار شماست."></meta>
+            <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
             <meta property="og:url" content="https://localhost:3000/"></meta>
             </Helmet>
             <div className='comment-form' >

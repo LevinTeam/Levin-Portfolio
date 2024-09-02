@@ -26,7 +26,7 @@ const Blog =() => {
         <link rel="canonical" href="https://localhost:3000"></link>
         <meta property="og:title" content="وبلاگ شرکت لوین | مقالات و نکات تخصصی طراحی وب‌سایت، سئو و امنیت"></meta>
         <meta property="og:description" content="وب‌سایت، سئو و امنیت وب در وبلاگ شرکت لوین. همراه ما باشید تا از جدیدترین اطلاعات بهره‌مند شوید"></meta>
-        <meta property="og:image" content=""></meta>
+        <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
         <meta property="og:url" content="https://localhost:3000/"></meta>
         </Helmet>
 
