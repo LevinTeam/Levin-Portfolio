@@ -35,6 +35,7 @@
 .card-img {
     padding-bottom: 56.25%;
     position: relative;
+    border-bottom: 3px solid var(--dark);
 }
 
 .card-img img {

@@ -2,7 +2,7 @@ import React from 'react'
 import './ContactUs.css'
 import Btn from './../../assest/Btn/Btn'
 import { useState } from 'react'
-import scrollTop from '../../utils';
+// import scrollTop from '../../utils';
 import Configs from '../../Private/Configs/Configs'
 import axios from 'axios';
 import { Helmet } from "react-helmet";
@@ -48,8 +48,8 @@ function ContactUs() {
         {
             id: 1,
             icon: <i class='bx bx-phone'></i> ,
-            text: '09927953352' ,
-            url:'tel:+989123456789' 
+            text: '0902-209-2996' ,
+            url:'tel:09022092996' 
         },
         {
             id: 2,
@@ -151,13 +151,13 @@ function ContactUs() {
             <div className="counseling">
             <section>
                 <h2>برای مشاوره رایگان تماس بگیرید</h2>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
-                <Btn 
+                <p>برای مشاوره رایگان  و همکاری میتوانید  از راه های زیر با ما ارتباط بگیرید</p>
+                {/* <Btn 
                 text='مشاوره' 
                 textColor="var(--bg-btn-color)"  
                 backgroundColor="var(--primary)" 
                 onClick={scrollTop}
-                />
+                /> */}
             </section>
                 <div className="contactUs-links">
                     {aboutCompany.map(item => (

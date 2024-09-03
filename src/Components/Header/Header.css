@@ -33,6 +33,7 @@
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
+    background-color: var(--bg-btn-color);
 }
 
 .header-logo {
