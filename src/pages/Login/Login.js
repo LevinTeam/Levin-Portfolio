@@ -162,11 +162,11 @@ export default function Login() {
         <title> {isActive ? "ثبت‌نام | شرکت لوین" : "ورود | شرکت لوین"} </title>
         <meta name="description" content="ورود به حساب کاربری و ثبت‌نام در شرکت لوین برای دسترسی به خدمات طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد. عضویت سریع و آسان."></meta>
         <meta name="keywords" content="ورود, ثبت‌نام, لاگین, ساین آپ, حساب کاربری, شرکت لوین, خدمات آنلاین, طراحی وب‌سایت, سئو"></meta>
-        <link rel="canonical" href="https://localhost:3000"></link>
+        <link rel="canonical" href="https://levinteam.ir"></link>
         <meta property="og:title" content={isActive ? "ثبت‌نام | شرکت لوین" : "ورود | شرکت لوین"}></meta>
         <meta property="og:description" content="ورود به حساب کاربری و ثبت‌نام در شرکت لوین برای دسترسی به خدمات طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد. عضویت سریع و آسان"></meta>
         <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
-        <meta property="og:url" content="https://localhost:3000/"></meta>
+        <meta property="og:url" content="https://levinteam.ir/"></meta>
       </Helmet>
 
       <div className={isActive ? "wrapper active" : "wrapper"}>

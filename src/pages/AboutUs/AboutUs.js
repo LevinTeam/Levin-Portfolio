@@ -19,11 +19,11 @@ const AboutUs = () => {
             <title>تماس با شرکت لوین | در ارتباط با ما، همراهی مطمئن برای رشد کسب‌وکار شما</title>
             <meta name="description" content="برای ارتباط مستقیم با تیم لوین و دریافت مشاوره‌های تخصصی در زمینه طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد، با ما تماس بگیرید. ما همراه شما هستیم تا مسیر موفقیت شما هموارتر شود."></meta>
             <meta name="keywords" content="تماس با ما, ارتباط با شرکت لوین, مشاوره رایگان, پشتیبانی, طراحی وب‌سایت, خدمات سئو, تیم حرفه‌ای, امنیت وب‌سایت"></meta>
-            <link rel="canonical" href="https://localhost:3000"></link>
+            <link rel="canonical" href="https://levinteam.ir"></link>
             <meta property="og:title" content="تماس با شرکت لوین | در ارتباط با ما، همراهی مطمئن برای رشد کسب‌وکار شما"></meta>
             <meta property="og:description" content="برای دریافت مشاوره‌های تخصصی در زمینه طراحی و توسعه وب‌سایت، سئو و امنیت، همین حالا با تیم لوین تماس بگیرید. ما برای پاسخگویی به سوالات و نیازهای شما آماده‌ایم."></meta>
             <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
-            <meta property="og:url" content="https://localhost:3000/"></meta>
+            <meta property="og:url" content="https://levinteam.ir/"></meta>
             </Helmet>
             <div className='aboutus-content'>
                 <section className='aboutus-text'>

@@ -16,11 +16,11 @@ import { Helmet } from "react-helmet";
           <title>{blogData.title}</title>
           <meta name="description" content={blogData.description}></meta>
           <meta name="keywords" content={blogData.keywords}></meta>
-          <link rel="canonical" href="https://localhost:3000"></link>
+          <link rel="canonical" href="https://levinteam.ir"></link>
           <meta property="og:title" content={blogData.ogTitle}></meta>
           <meta property="og:description" content={blogData.ogDescription}></meta>
           <meta property="og:image" content={blogData.imgCover}></meta>
-          <meta property="og:url" content="https://localhost:3000/"></meta>
+          <meta property="og:url" content="https://levinteam.ir/"></meta>
         </Helmet>
         <h2>{blogData.title}</h2>
         <img src={blogData.imgHeader} alt={blogData.imgCoverAlt} title={blogData.title} />

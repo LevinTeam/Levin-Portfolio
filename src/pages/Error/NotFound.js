@@ -14,11 +14,11 @@ export default function NotFound() {
             <title>صفحه مورد نظر پیدا نشد | شرکت لوین - بازگشت به مسیر درست</title>
             <meta name="description" content="متاسفانه صفحه‌ای که به دنبال آن بودید پیدا نشد. می‌توانید به صفحه اصلی بازگردید یا از منوی سایت برای یافتن محتوای مورد نظرتان استفاده کنید. شرکت لوین در کنار شماست تا به سرعت به مسیر درست بازگردید."></meta>
             <meta name="keywords" content=" صفحه پیدا نشد, 404, ارور 404, مسیر درست, بازگشت به صفحه اصلی, شرکت لوین"></meta>
-            <link rel="canonical" href="https://localhost:3000"></link>
+            <link rel="canonical" href="https://levinteam.ir"></link>
             <meta property="og:title" content="صفحه مورد نظر پیدا نشد | شرکت لوین - بازگشت به مسیر درست"></meta>
             <meta property="og:description" content=" متاسفانه صفحه‌ای که به دنبال آن بودید وجود ندارد. با کمک لینک‌های زیر می‌توانید به صفحات دیگر بازگردید."></meta>
             <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
-            <meta property="og:url" content="https://localhost:3000/"></meta>
+            <meta property="og:url" content="https://levinteam.ir/"></meta>
             </Helmet>
     <div className='err-404'>
         <svg width="803" height="283" viewBox="0 0 803 283" fill="none" xmlns="http://www.w3.org/2000/svg">
