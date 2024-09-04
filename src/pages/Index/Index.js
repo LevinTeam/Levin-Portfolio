@@ -13,25 +13,25 @@ export default function Index() {
   // Smart Management Text Box =>
 
     const smTextBox = [
-      {id:1 , src: "Images/Icon/Checkbox-Done.svg" , text: "افزایش فروش و بهره‌وری"} ,
-      {id:2 , src: "Images/Icon/Checkbox-Done.svg" , text: "سیستم نوبت‌دهی آنلاین یکپارچه"} ,
-      {id:3 , src: "Images/Icon/Checkbox-Done.svg" , text: "ایجاد گالری اختصاصی برای نمایش محصولات"} ,
-      {id:4 , src: "Images/Icon/Checkbox-Done.svg" , text: "پرداخت‌های امن و مطمئن"} ,
-      {id:5 , src: "Images/Icon/Checkbox-Done.svg" , text: "مدیریت ساده و کاربرپسند"} ,
-      {id:6 , src: "Images/Icon/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
+      {id:1 , src: "/Images/Icon/Checkbox-Done.svg" , text: "افزایش فروش و بهره‌وری"} ,
+      {id:2 , src: "/Images/Icon/Checkbox-Done.svg" , text: "سیستم نوبت‌دهی آنلاین یکپارچه"} ,
+      {id:3 , src: "/Images/Icon/Checkbox-Done.svg" , text: "ایجاد گالری اختصاصی برای نمایش محصولات"} ,
+      {id:4 , src: "/Images/Icon/Checkbox-Done.svg" , text: "پرداخت‌های امن و مطمئن"} ,
+      {id:5 , src: "/Images/Icon/Checkbox-Done.svg" , text: "مدیریت ساده و کاربرپسند"} ,
+      {id:6 , src: "/Images/Icon/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
     ]
 
     // Card List =>
 
     const cardData = [
-      { id: 1, src: '#' , name: ' فرانت اند ', description: 'طراحی رابط کاربری مدرن و واکنش‌گرا برای تجربه‌ای جذاب.' },
-      { id: 2, src: '#' , name: ' بک اند ', description: 'پیاده‌سازی منطق قدرتمند و امن برای پشت‌صحنه اپلیکیشن‌ها.' },
-      { id: 3, src: '#' , name: ' سئو ', description: 'بهینه‌سازی سایت برای بهبود رتبه در موتورهای جستجو.' },
-      { id: 4, src: '#' , name: ' دیزاین ', description: 'خلق طراحی‌های گرافیکی منحصربه‌فرد و کاربرپسند.' },
-      { id: 5, src: '#' , name: ' ربات تلگرام ', description: 'توسعه ربات‌های تلگرام برای خدمات خودکار و سریع.' },
-      { id: 6, src: '#' , name: ' ربات دیسکورد ', description: 'ساخت ربات‌های دیسکورد برای بهبود مدیریت و تعامل.' },
-      { id: 7, src: '#' , name: ' امنیت ', description: 'افزایش امنیت با شناسایی و رفع آسیب‌پذیری‌ها.' },
-      { id: 8, src: '#' , name: ' ریدیزاین ', description: 'بازطراحی مدرن برای بهبود تجربه کاربری و برند.' }
+      { id: 1 , name: ' فرانت اند ', description: 'طراحی رابط کاربری مدرن و واکنش‌گرا برای تجربه‌ای جذاب.' },
+      { id: 2 , name: ' بک اند ', description: 'پیاده‌سازی منطق قدرتمند و امن برای پشت‌صحنه اپلیکیشن‌ها.' },
+      { id: 3 , name: ' سئو ', description: 'بهینه‌سازی سایت برای بهبود رتبه در موتورهای جستجو.' },
+      { id: 4 , name: ' دیزاین ', description: 'خلق طراحی‌های گرافیکی منحصربه‌فرد و کاربرپسند.' },
+      { id: 5 , name: ' ربات تلگرام ', description: 'توسعه ربات‌های تلگرام برای خدمات خودکار و سریع.' },
+      { id: 6 , name: ' ربات دیسکورد ', description: 'ساخت ربات‌های دیسکورد برای بهبود مدیریت و تعامل.' },
+      { id: 7 , name: ' امنیت ', description: 'افزایش امنیت با شناسایی و رفع آسیب‌پذیری‌ها.' },
+      { id: 8 , name: ' ریدیزاین ', description: 'بازطراحی مدرن برای بهبود تجربه کاربری و برند.' }
     ];
 
       const [showModal, setShowModal] = useState(false);
@@ -112,18 +112,17 @@ export default function Index() {
       <title>شرکت لوین | طراحی وب‌سایت، سئو و امنیت و طراحی ربات های تلگرام و دیسکورد</title>
             <meta name="description" content="شرکت لوین ارائه دهنده خدمات طراحی و توسعه وب‌سایت، سئو، امنیت و طراحی ربات‌های تلگرام و دیسکورد. با تیم حرفه‌ای ما وب‌سایت خود را به سطح بالاتری ببرید."></meta>
             <meta name="keywords" content="طراحی وب‌سایت, توسعه وب, سئو, امنیت وب‌سایت, ربات تلگرام, ربات دیسکورد, طراحی با فیگما, جنگو, نود جی‌اس, وانیلا، ری‌اکت،"></meta>
-            <link rel="canonical" href="https://localhost:3000"></link>
+            <link rel="canonical" href="https://levinteam.ir/"></link>
             <meta property="og:title" content="شرکت لوین | طراحی وب‌سایت، سئو، امنیت و ربات‌های تلگرام و دیسکورد"></meta>
             <meta property="og:description" content="شرکت لوین ارائه دهنده خدمات طراحی و توسعه وب‌سایت، سئو، امنیت و طراحی ربات‌های تلگرام و دیسکورد. با تیم حرفه‌ای ما وب‌سایت خود را به سطح بالاتری ببرید."></meta>
             <meta property="og:image" content="Images/Icon/favIcon.svg"></meta>
-            <meta property="og:url" content="https://localhost:3000/"></meta>
+            <meta property="og:url" content="https://levinteam.ir/"></meta>
       </Helmet>
- <h1 style={{display:"none"}}>لوین تیمSEO</h1> {/* This section should go to the external CSS file after SEO */}
 
     {/* Hero box => */}
     <div className='hero-box'>
         <div className='hero-box-text'>
-            <h2>نینجا ها برای خدمت به شما آماده اند...</h2>
+            <h1>نینجا ها برای خدمت به شما آماده اند...</h1>
             <p>در لوین، با استفاده از جدیدترین روش‌های طراحی وب‌سایت، پروژه‌های منحصربه‌فردی خلق می‌کنیم. با ما همراه شوید تا تجربه‌ای حرفه‌ای و بی‌نظیر را در طراحی وب‌سایت به دست آورید.</p>
         <div>
             <Btn 

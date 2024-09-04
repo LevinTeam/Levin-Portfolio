@@ -33,7 +33,7 @@ const TiltCard = ({ job , profile , about , portfolio , name }) => {
     			<div className={ `contentBox ${job}` } >
     				<h3> {name} </h3>
     				<p> {about} </p>
-    				<a href={portfolio} ><span>درباره من</span></a>
+    				<a href={portfolio} target='_blank' ><span>درباره من</span></a>
     			</div>
     		</div>
   );
