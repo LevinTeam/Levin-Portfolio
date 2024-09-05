@@ -13,12 +13,12 @@ export default function Index() {
   // Smart Management Text Box =>
 
     const smTextBox = [
-      {id:1 , src: "/Images/Icon/Checkbox-Done.svg" , text: "افزایش فروش و بهره‌وری"} ,
-      {id:2 , src: "/Images/Icon/Checkbox-Done.svg" , text: "سیستم نوبت‌دهی آنلاین یکپارچه"} ,
-      {id:3 , src: "/Images/Icon/Checkbox-Done.svg" , text: "ایجاد گالری اختصاصی برای نمایش محصولات"} ,
-      {id:4 , src: "/Images/Icon/Checkbox-Done.svg" , text: "پرداخت‌های امن و مطمئن"} ,
-      {id:5 , src: "/Images/Icon/Checkbox-Done.svg" , text: "مدیریت ساده و کاربرپسند"} ,
-      {id:6 , src: "/Images/Icon/Checkbox-Done.svg" , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
+      {id:1 , icon: <i class='bx bx-check-circle'></i> , text: "افزایش فروش و بهره‌وری"} ,
+      {id:2 , icon: <i class='bx bx-check-circle'></i> , text: "سیستم نوبت‌دهی آنلاین یکپارچه"} ,
+      {id:3 , icon: <i class='bx bx-check-circle'></i> , text: "ایجاد گالری اختصاصی برای نمایش محصولات"} ,
+      {id:4 , icon: <i class='bx bx-check-circle'></i> , text: "پرداخت‌های امن و مطمئن"} ,
+      {id:5 , icon: <i class='bx bx-check-circle'></i> , text: "مدیریت ساده و کاربرپسند"} ,
+      {id:6 , icon: <i class='bx bx-check-circle'></i> , text: "طراحی اختصاصی و متناسب با نیازهای شما"} ,
     ]
 
     // Card List =>
@@ -232,7 +232,7 @@ export default function Index() {
         <ul>
           {smTextBox.map((textBox) => (
               <li className="sm-textbox-list" key={textBox.id}>
-                <img src={textBox.src} />
+                {textBox.icon}
                 <p>{textBox.text}</p>
               </li>
           ))}

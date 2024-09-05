@@ -364,8 +364,14 @@
     font-weight: 500;
 }
 
+.sm-textbox-list i {
+    font-size: 28px;
+    color: var(--primary);
+}
+
 .sm-textbox-list p {
     padding-right: 5px;
+    margin-top: .5%;
 }
 
 /* Call To Action */
@@ -403,11 +409,7 @@
     justify-content: center;
     font-family: 'Vazirmatn';
     margin-top: 15%;
-    /* border: 3px dotted var(--dark); */
     user-select: none;
-    /* border-radius: 25px;
-    box-shadow: 0 0 10px var(--light);
-    backdrop-filter: blur(25px); */
 }   
 
 .roadmap-top {
@@ -469,6 +471,7 @@
     font-size: 24px;
     color: var(--light);
     margin-top: -5%;
+    text-wrap: nowrap;
 }
 
 .roadmap-cart p {
@@ -478,14 +481,6 @@
     color: var(--text);
     margin-top: 1%;
 }
-
-
-
-
-
-
-
-
 
 
 /* Respawnsive Code */
@@ -546,7 +541,7 @@
 
     /* Roadmap Card */
     .roadmap-cart {
-        width: 50%;
+        width: calc(50% - 40px);
     }
 
 
