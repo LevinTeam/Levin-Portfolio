@@ -7,7 +7,7 @@ const ArticlesData = [
     ogTitle: '',
     ogDescription: '',
     preview:'همه چیزهایی که یک توسعه‌دهنده فرانت‌اند باید درباره SEO بداند، از تگ‌های HTML تا بهینه‌سازی سرعت و واکنش‌گرایی...' ,
-    imgCover:'/Images/Articles/1/cover.jpg' ,
+    imgCover:'Images/Articles/1/Cover.jpg' ,
     imgCoverAlt: 'کاور سئو',
     imgHeader:'/Images/Articles/1/Header.jpg' ,
     content: [
