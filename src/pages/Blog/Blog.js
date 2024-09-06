@@ -3,6 +3,7 @@ import './Blog.css'
 import { Link } from 'react-router-dom'
 import ArticlesData from './ArticlesData/ArticlesData'
 import { Helmet } from "react-helmet";
+import scrollTop from '../../utils'
 
 const Blog =() => {
 
@@ -48,7 +49,7 @@ const Blog =() => {
       ))
     ) : (
       articles.map( (info) => (
-          <Link to={`/Blog/${info.id}`} class="blog-card" key={info.id} >
+          <Link to={`/Blog/${info.id}`} class="blog-card" key={info.id} onClick={scrollTop}>
           <div class="card-img">
             <img src={info.imgCover} />
           </div>

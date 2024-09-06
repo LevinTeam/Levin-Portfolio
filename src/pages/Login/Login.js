@@ -48,7 +48,7 @@ export default function Login() {
       }).then(async response => {
         switch (response.status) {
           case 200:
-            console.log(`Account Successfully Loggined for Number : ${response.data.UserData.UserPhoneNumber}`)
+            // console.log(`Account Successfully Loggined for Number : ${response.data.UserData.UserPhoneNumber}`)
             toast.success('خوش آمدید')
             navigate('/')
             cookies.set('userToken', response.data.UserToken, { path: '/' })
@@ -63,7 +63,7 @@ export default function Login() {
       }).catch(async error => {
         switch (error.response.status) {
           case 400:
-            console.log(`Error -> Login -> handleLoginSubmit => ${error.response.data.Data}`)
+            // console.log(`Error -> Login -> handleLoginSubmit => ${error.response.data.Data}`)
             toast.error(error.response.data.Data)
             cookies.set('userToken', "", { path: '/' })
             return {
@@ -72,7 +72,7 @@ export default function Login() {
           break;
 
           case 404:
-            console.log(`Error -> Login -> handleLoginSubmit => ${error.response.data.Data}`)
+            // console.log(`Error -> Login -> handleLoginSubmit => ${error.response.data.Data}`)
             toast.error(error.response.data.Data)
             cookies.set('userToken', "", { path: '/' })
             return {
@@ -106,7 +106,7 @@ export default function Login() {
       }).then(async response => {
         switch (response.status) {
           case 201:
-            console.log(`Account Created for Number: ${response.data.UserData.UserPhoneNumber}`)
+            // console.log(`Account Created for Number: ${response.data.UserData.UserPhoneNumber}`)
             toast.success('خوش آمدید')
             navigate('/')
             cookies.set('userToken', response.data.UserToken, { path: '/' })
@@ -121,7 +121,7 @@ export default function Login() {
       }).catch(async error => {
         switch (error.response.status) {
           case 400:
-            console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
+            // console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
             toast.error(error.response.data.Data)
             cookies.set('userToken', "", { path: '/' })
             return {
@@ -130,7 +130,7 @@ export default function Login() {
           break;
 
           case 500:
-            console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
+            // console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
             toast.error('خطایی در هنگام ساخت اکانت شما رخ داد')
             cookies.set('userToken', "", { path: '/' })
             return {
@@ -139,7 +139,7 @@ export default function Login() {
           break;
 
           case 503:
-            console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
+            // console.log(`Error -> Login -> handleSingupSubmit => ${error.response.data.Data}`)
             toast.error('خطای سرور')
             cookies.set('userToken', "", { path: '/' })
             return {

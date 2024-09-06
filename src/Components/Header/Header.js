@@ -40,7 +40,7 @@ const closeMenu = () => {
 }
 
 let userToken = getCookie('userToken');
-console.log(`User Token in header -> ${userToken}`)
+// console.log(`User Token in header -> ${userToken}`)
 
   return (
     <div className='main-header'>
@@ -53,6 +53,7 @@ console.log(`User Token in header -> ${userToken}`)
             textColor={'var(--bg-btn-color)'} 
             to={'/login'}
             onClick={scrollTop}
+            replace={true}
           />
         ) : (
             <p className='user-panel'> خوش آمدید </p>
@@ -97,14 +98,19 @@ console.log(`User Token in header -> ${userToken}`)
         {menuOpen && (
           <div className='mobile-menu'>
             <ul className='mobile-menu-items'>
-              <li className='mobile-menu-item' >
-                <Btn               
-                  text={'ثبت نام | ورود'} 
-                  backgroundColor={'var(--primary)'} 
-                  textColor={'var(--bg-btn-color)'}
-                  to={'/login'}
-                  onClick={closeMenu}
-                  />
+              <li className='mobile-menu-item' onClick={closeMenu} >
+              { !userToken ? (
+            <Btn
+            text={'ثبت نام | ورود'} 
+            backgroundColor={'var(--primary)'} 
+            textColor={'var(--bg-btn-color)'} 
+            to={'/login'}
+            onClick={scrollTop}
+            replace={true}
+          />
+        ) : (
+            <p className='user-panel'> خوش آمدید </p>
+          ) }
               </li>
               {links.map((link) => (
                 <li key={link.id} className='mobile-menu-item' onClick={closeMenu}>

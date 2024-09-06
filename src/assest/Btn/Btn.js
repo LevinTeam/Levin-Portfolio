@@ -1,8 +1,8 @@
 import React from 'react';
 import './Btn.css';
-import { Link } from 'react-router-dom'; 
+import { Link, replace } from 'react-router-dom'; 
 
-const Btn = ({ text, backgroundColor, textColor, border , to , onClick}) => {
+const Btn = ({ text, backgroundColor, textColor, border , to , onClick , replace}) => {
 
     return (
         <Link 
@@ -10,6 +10,7 @@ const Btn = ({ text, backgroundColor, textColor, border , to , onClick}) => {
             style={{ backgroundColor: backgroundColor, color: textColor , border : border}}
             to={to}
             onClick={onClick}
+            replace={replace}
         >
             {text}
         </Link>

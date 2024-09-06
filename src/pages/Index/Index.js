@@ -88,7 +88,6 @@ export default function Index() {
     
           const found = services.find(modalData => modalData.id === modalTarget);
           setFoundData(found);
-          console.log(foundData);
           
         } else {
           document.body.classList.remove('modal-open');

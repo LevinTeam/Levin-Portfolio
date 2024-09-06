@@ -6,6 +6,7 @@ import { useState } from 'react'
 import Configs from '../../Private/Configs/Configs'
 import axios from 'axios';
 import { Helmet } from "react-helmet";
+import toast from 'react-hot-toast'
 
 function ContactUs() {
 
@@ -162,7 +163,7 @@ function ContactUs() {
                 <div className="contactUs-links">
                     {aboutCompany.map(item => (
                       <div key={item.id} className='contactus-box'>
-                        {item.icon} 
+                        {item.icon}
                         <a href={item.url}> <p>{item.text}</p> </a>
                       </div>
                         ))}
@@ -188,7 +189,8 @@ const SubmitForm = async ({Name: Name, Email: Email, PhoneNumber: PhoneNumber, C
     switch (response.status) {
       case 201:
         if (response.data.Data === "Comment Created") {
-          console.log(`Comment Created with ID: #${response.data.CommentData.CommentID}`)
+          // console.log(`Comment Created with ID: #${response.data.CommentData.CommentID}`)
+          toast.success(response.data.CommentData.CommentID)
           return {
             Data: response.data.CommentData
           }
@@ -200,14 +202,16 @@ const SubmitForm = async ({Name: Name, Email: Email, PhoneNumber: PhoneNumber, C
   }).catch(async error => {
     switch (error.response.status) {
       case 404:
-        console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        // console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        toast.error(error.response.data.Data)
         return {
           Data: error.response.data.Data
         }
       break;
 
       case 500:
-        console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        // console.log(`Error -> ContactUs => ${error.response.data.Data}`)
+        toast.error(error.response.data.Data)
         return {
           Data: error.response.data.Data
         }

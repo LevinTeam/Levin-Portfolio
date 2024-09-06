@@ -72,14 +72,20 @@ ul {
 .header-buttons .user-panel {
     font-size: 20px;
     font-weight: 900;
-    color: var(--text);
+    color: var(--dark);
+    transition: .3s;
 }
 
-/* .header-buttons .user-panel:hover::before {
-    content: 'به زودی';
-    display: flex;
-    position: absolute;
-} */
+.mobile-menu-item .user-panel {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--dark);
+    transition: .3s;
+}
+
+.user-panel:hover {
+    color: var(--light);
+}
 
 .menu-icon {
     display: none;

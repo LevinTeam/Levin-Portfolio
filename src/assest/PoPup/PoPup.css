@@ -10,7 +10,6 @@
 .modal-container {
   position: relative;
   width: 400px;
-  min-height: 440px;
   max-height: max-content;
   background: var(--bg-btn-color);
   opacity: .9;
