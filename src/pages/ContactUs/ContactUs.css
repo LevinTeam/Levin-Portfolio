@@ -85,6 +85,15 @@
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .contactus-box a {
+        display: none;
+    }
+    .contactus-box i {
+        font-size: 3.5rem;
+    }
+}
+
 
 /* Comment Form */
 
